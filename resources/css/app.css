@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', 'Roboto', sans-serif;
+  }
+  
+  .font-bengali {
+    font-family: 'Noto Sans Bengali', 'SolaimanLipi', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ghee-gold hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-ghee-gold to-yellow-600 bg-clip-text text-transparent;
+  }
+}
