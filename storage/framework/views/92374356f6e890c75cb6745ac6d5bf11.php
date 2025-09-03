@@ -44,34 +44,11 @@
         <!-- Features Section -->
         <?php echo $__env->make('components.features-section', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
         
-        <!-- Pricing Section -->
-        <?php echo $__env->make('components.pricing-section', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+        <!-- Comparison Section -->
+        <?php echo $__env->make('components.comparison-section', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
         
-        <!-- Order Form Section -->
-        <section id="order" class="py-16 bg-gray-50">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 font-bengali mb-4">অর্ডার করতে নিচের ফর্মটি পূরণ করুন</h2>
-                    <p class="text-lg text-gray-600 font-bengali">ক্যাশ অন ডেলিভারি সুবিধা</p>
-                </div>
-                <?php
-$__split = function ($name, $params = []) {
-    return [$name, $params];
-};
-[$__name, $__params] = $__split('contact-form');
-
-$__html = app('livewire')->mount($__name, $__params, 'lw-3736044010-0', $__slots ?? [], get_defined_vars());
-
-echo $__html;
-
-unset($__html);
-unset($__name);
-unset($__params);
-unset($__split);
-if (isset($__slots)) unset($__slots);
-?>
-            </div>
-        </section>
+        <!-- Combined Checkout Section -->
+        <?php echo $__env->make('components.checkout-section', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
         
         <!-- FAQ Section -->
         <section class="py-16 bg-white">
@@ -86,7 +63,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split('faq');
 
-$__html = app('livewire')->mount($__name, $__params, 'lw-3736044010-1', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'lw-3736044010-0', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 

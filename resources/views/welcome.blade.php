@@ -43,19 +43,11 @@
         <!-- Features Section -->
         @include('components.features-section')
         
-        <!-- Pricing Section -->
-        @include('components.pricing-section')
+        <!-- Comparison Section -->
+        @include('components.comparison-section')
         
-        <!-- Order Form Section -->
-        <section id="order" class="py-16 bg-gray-50">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 font-bengali mb-4">অর্ডার করতে নিচের ফর্মটি পূরণ করুন</h2>
-                    <p class="text-lg text-gray-600 font-bengali">ক্যাশ অন ডেলিভারি সুবিধা</p>
-                </div>
-                @livewire('contact-form')
-            </div>
-        </section>
+        <!-- Combined Checkout Section -->
+        @include('components.checkout-section')
         
         <!-- FAQ Section -->
         <section class="py-16 bg-white">
