@@ -74,23 +74,6 @@
             @enderror
         </div>
 
-        <!-- Package Selection -->
-        <div class="mb-6">
-            <label for="package" class="block text-sm font-bold text-gray-700 font-bengali mb-2">
-                প্যাকেজ নির্বাচন করুন *
-            </label>
-            <select 
-                id="package"
-                wire:model.live="package"
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ghee-gold focus:border-transparent font-bengali @error('package') border-red-500 @enderror"
-            >
-                <option value="single">সিঙ্গেল প্যাক (৩০০গ্রাম × ১টি) - ৳৮৭০</option>
-                <option value="bundle">বান্ডেল প্যাক (৩০০গ্রাম × ২টি) - ৳১৫৩০ (৳২১০ সাশ্রয়)</option>
-            </select>
-            @error('package') 
-                <p class="mt-1 text-sm text-red-600 font-bengali">{{ $message }}</p> 
-            @enderror
-        </div>
 
         <!-- Delivery Area -->
         <div class="mb-6">

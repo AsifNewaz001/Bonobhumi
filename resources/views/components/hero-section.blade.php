@@ -53,18 +53,18 @@
             <!-- Four Sentences -->
             <div class="space-y-3" style="font-family: 'Hind Siliguri', sans-serif; font-weight: 600;">
                 <!-- Desktop font size: 47px -->
-                <p class="hidden md:block" style="color: #614e21; font-size: 47px; line-height: 1.1;">বর্তমান ঘি'য়ের বেশিরভাগই তৈরি হয়</p>
-                <!-- Mobile: responsive font size -->
-                <p class="block md:hidden text-xl sm:text-2xl" style="color: #614e21; line-height: 1.1;">বর্তমান ঘি'য়ের বেশিরভাগই তৈরি হয়</p>
+                <p class="hidden md:block" style="color: #614e21; font-size: 42px; line-height: 1.1;">বর্তমান ঘি'য়ের বেশিরভাগই তৈরি হয়</p>
+                <!-- Mobile: consistent font size -->
+                <p class="block md:hidden" style="color: #614e21; font-size: 25px; line-height: 1.1;">বর্তমান ঘি'য়ের বেশিরভাগই তৈরি হয়</p>
                 
-                <p class="px-6 py-3 rounded-lg inline-block hidden md:inline-block" style="color: #ffffff; background-color: #36B853; font-size: 45px; line-height: 1.1;">কাঁচা দুধ থেকে ক্রিম সেপারেশন করে</p>
-                <p class="px-4 py-2 rounded-lg inline-block block md:hidden text-lg sm:text-xl" style="color: #ffffff; background-color: #36B853; line-height: 1.1;">কাঁচা দুধ থেকে ক্রিম সেপারেশন করে</p>
+                <p class="px-6 py-3 rounded-lg inline-block hidden md:inline-block" style="color: #ffffff; background-color: #36B853; font-size: 42px; line-height: 1.1;">কাঁচা দুধ থেকে ক্রিম সেপারেশন করে</p>
+                <p class="px-4 py-2 rounded-lg inline-block block md:hidden" style="color: #ffffff; background-color: #36B853; font-size: 25px; line-height: 1.1;">কাঁচা দুধ থেকে ক্রিম সেপারেশন করে</p>
                 
-                <p class="hidden md:block" style="color: #614e21; font-size: 47px; line-height: 1.1;">তাইতো এখন পাওয়া যায়না সেই</p>
-                <p class="block md:hidden text-xl sm:text-2xl" style="color: #614e21; line-height: 1.1;">তাইতো এখন পাওয়া যায়না সেই</p>
+                <p class="hidden md:block" style="color: #614e21; font-size: 42px; line-height: 1.1;">তাইতো এখন পাওয়া যায়না সেই</p>
+                <p class="block md:hidden" style="color: #614e21; font-size: 25px; line-height: 1.1;">তাইতো এখন পাওয়া যায়না সেই</p>
                 
-                <p class="hidden md:block" style="color: #614e21; font-size: 47px; line-height: 1.1;">আগেকার ঘি'এর স্বাদ!</p>
-                <p class="block md:hidden text-xl sm:text-2xl" style="color: #614e21; line-height: 1.1;">আগেকার ঘি'এর স্বাদ!</p>
+                <p class="hidden md:block" style="color: #614e21; font-size: 42px; line-height: 1.1;">আগেকার ঘি'এর স্বাদ!</p>
+                <p class="block md:hidden" style="color: #614e21; font-size: 25px; line-height: 1.1;">আগেকার ঘি'এর স্বাদ!</p>
             </div>
         </div>
     </div>

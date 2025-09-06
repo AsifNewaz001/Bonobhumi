@@ -2,16 +2,19 @@
     @foreach($faqs as $faq)
         <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
             <!-- Question Header -->
-            <button 
-                type="button"
+            <div 
                 @click="openFaq = openFaq === {{ $faq['id'] }} ? null : {{ $faq['id'] }}"
-                class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition-colors"
+                class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 cursor-pointer transition-colors select-none"
                 :class="{ 'bg-gray-50': openFaq === {{ $faq['id'] }} }"
+                role="button"
+                tabindex="0"
+                @keydown.enter="openFaq = openFaq === {{ $faq['id'] }} ? null : {{ $faq['id'] }}"
+                @keydown.space.prevent="openFaq = openFaq === {{ $faq['id'] }} ? null : {{ $faq['id'] }}"
             >
-                <span class="text-lg font-semibold text-gray-900 font-bengali pr-4">
+                <span class="text-lg font-semibold text-gray-900 font-bengali pr-4 pointer-events-none">
                     {{ $faq['question'] }}
                 </span>
-                <div class="flex-shrink-0">
+                <div class="flex-shrink-0 pointer-events-none">
                     <svg 
                         class="w-5 h-5 text-ghee-gold transform transition-transform duration-200"
                         :class="{ 'rotate-180': openFaq === {{ $faq['id'] }} }"
@@ -22,7 +25,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                     </svg>
                 </div>
-            </button>
+            </div>
             
             <!-- Answer Content -->
             <div 
