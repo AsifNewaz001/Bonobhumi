@@ -423,7 +423,7 @@ npm run build
 - [ ] Additional FAQs
 - [ ] Product images refresh
 
-## 📝 Notes for Claude Code
+## 📝 Implementation Notes
 
 ### Implementation Priority
 1. Start with basic Laravel project setup
