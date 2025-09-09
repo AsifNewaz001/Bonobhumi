@@ -193,7 +193,7 @@
                     </div>
                 </div>
                 
-                @livewire('contact-form')
+                @include('order-form')
             </div>
         </div>
     </div>
@@ -258,8 +258,13 @@ function checkoutCart() {
             name: 'বান্ডেল প্যাক (৩০০গ্রাম × ২টি)',
             price: 1530,
             savings: 210,
-            delivery: 'ফ্রি',
+            delivery: 'ডেলিভারি এলাকা অনুযায়ী',
             total: 1530
+        },
+        
+        init() {
+            // Initial sync with Livewire on page load
+            this.syncWithLivewire();
         },
         
         updateCart() {
@@ -268,18 +273,30 @@ function checkoutCart() {
                     name: 'সিঙ্গেল প্যাক (৩০০গ্রাম × ১টি)',
                     price: 870,
                     savings: 0,
-                    delivery: '+৳১০০',
-                    total: 970
+                    delivery: 'ডেলিভারি এলাকা অনুযায়ী',
+                    total: 870
                 };
             } else {
                 this.cart = {
                     name: 'বান্ডেল প্যাক (৩০০গ্রাম × ২টি)',
                     price: 1530,
                     savings: 210,
-                    delivery: 'ফ্রি',
+                    delivery: 'ডেলিভারি এলাকা অনুযায়ী', 
                     total: 1530
                 };
             }
+            
+            // Send event to update form
+            window.dispatchEvent(new CustomEvent('packageChanged', {
+                detail: { package: this.selectedPackage }
+            }));
+        },
+        
+        syncWithLivewire() {
+            // Send event to update form on page load
+            window.dispatchEvent(new CustomEvent('packageChanged', {
+                detail: { package: this.selectedPackage }
+            }));
         }
     }
 }

@@ -41,7 +41,7 @@
                 </h2>
                 
                 <!-- CTA Button -->
-                <a href="#order" class="inline-block px-6 py-3 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:shadow-lg" 
+                <a href="#checkout" class="inline-block px-6 py-3 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:shadow-lg transform hover:scale-105" 
                    style="font-family: 'Hind Siliguri', sans-serif; background: linear-gradient(0deg, #059845 0%, #018038 100%); border: 2px solid #DEE6E2;">
                     এখনই অর্ডার করুন
                 </a>
@@ -67,7 +67,7 @@
                     বনভূমি A2 সরের ঘি
                 </h2>
                 
-                <a href="#order" class="inline-block px-12 py-6 rounded-lg text-white font-bold text-2xl transition-all duration-300 hover:shadow-lg" 
+                <a href="#checkout" class="inline-block px-12 py-6 rounded-lg text-white font-bold text-2xl transition-all duration-300 hover:shadow-lg transform hover:scale-105" 
                    style="font-family: 'Hind Siliguri', sans-serif; background: linear-gradient(0deg, #059845 0%, #018038 100%); border: 2px solid #DEE6E2;">
                     এখনই অর্ডার করুন
                 </a>
