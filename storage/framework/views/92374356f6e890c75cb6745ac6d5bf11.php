@@ -51,10 +51,11 @@
         <?php echo $__env->make('components.checkout-section', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
         
         <!-- FAQ Section -->
-        <section class="py-16 bg-white">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="py-16 bg-cover bg-center bg-no-repeat relative" style="background-image: url('<?php echo e(asset('bgFAQ.png')); ?>');">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center lg:justify-end">
+                <div class="max-w-4xl lg:mr-8">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 font-bengali mb-4">প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী</h2>
+                    <h2 class="text-3xl font-bold text-white font-bengali mb-4">FAQs</h2>
                     <div class="w-24 h-1 bg-ghee-gold mx-auto"></div>
                 </div>
                 <?php
@@ -73,6 +74,7 @@ unset($__params);
 unset($__split);
 if (isset($__slots)) unset($__slots);
 ?>
+                </div>
             </div>
         </section>
     </main>

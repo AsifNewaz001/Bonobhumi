@@ -9,6 +9,7 @@ return array(
     'App\\Livewire\\ContactForm' => $baseDir . '/app/Livewire/ContactForm.php',
     'App\\Livewire\\FAQ' => $baseDir . '/app/Livewire/FAQ.php',
     'App\\Livewire\\TestimonialCarousel' => $baseDir . '/app/Livewire/TestimonialCarousel.php',
+    'App\\Order' => $baseDir . '/app/Order.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Brick\\Math\\BigDecimal' => $vendorDir . '/brick/math/src/BigDecimal.php',

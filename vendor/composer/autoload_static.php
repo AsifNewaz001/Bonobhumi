@@ -515,6 +515,7 @@ class ComposerStaticInitd0a45360822c1dde4a8c9d7b62445dbd
         'App\\Livewire\\ContactForm' => __DIR__ . '/../..' . '/app/Livewire/ContactForm.php',
         'App\\Livewire\\FAQ' => __DIR__ . '/../..' . '/app/Livewire/FAQ.php',
         'App\\Livewire\\TestimonialCarousel' => __DIR__ . '/../..' . '/app/Livewire/TestimonialCarousel.php',
+        'App\\Order' => __DIR__ . '/../..' . '/app/Order.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',

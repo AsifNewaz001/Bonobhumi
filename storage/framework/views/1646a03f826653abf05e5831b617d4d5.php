@@ -1,35 +1,18 @@
 <div class="max-w-2xl mx-auto">
-    <!--[if BLOCK]><![endif]--><?php if($showSuccess): ?>
-        <!-- Success Message -->
+    <?php if(session('success')): ?>
         <div class="bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg mb-6 font-bengali animate-pulse">
             <div class="flex items-center">
                 <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
                 <div>
-                    <h4 class="text-lg font-bold">অর্ডার সফলভাবে সম্পন্ন হয়েছে!</h4>
-                    <p class="text-sm mt-1">আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব। ধন্যবাদ!</p>
+                    <h4 class="text-lg font-bold"><?php echo e(session('success')); ?></h4>
                 </div>
             </div>
         </div>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?>
 
-    <!--[if BLOCK]><![endif]--><?php if(session('success')): ?>
-        <!-- Session Success Message -->
-        <div class="bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg mb-6 font-bengali">
-            <div class="flex items-center">
-                <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-                <div>
-                    <p class="font-bold"><?php echo e(session('success')); ?></p>
-                </div>
-            </div>
-        </div>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-
-    <!--[if BLOCK]><![endif]--><?php if(session('error')): ?>
-        <!-- Error Message -->
+    <?php if(session('error')): ?>
         <div class="bg-red-100 border border-red-400 text-red-700 px-6 py-4 rounded-lg mb-6 font-bengali">
             <div class="flex items-center">
                 <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -40,14 +23,19 @@
                 </div>
             </div>
         </div>
-    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+    <?php endif; ?>
 
-    <form wire:submit.prevent="submitOrder" class="bg-white rounded-2xl shadow-xl p-8">
+    <form method="POST" action="<?php echo e(route('order.store')); ?>" class="bg-white rounded-2xl shadow-xl p-8">
+        <?php echo csrf_field(); ?>
+        
         <!-- Form Header -->
         <div class="text-center mb-8">
             <h3 class="text-2xl font-bold text-gray-900 font-bengali mb-2">অর্ডার ফর্ম</h3>
             <p class="text-gray-600 font-bengali">নিচের তথ্যগুলো সঠিকভাবে পূরণ করুন</p>
         </div>
+
+        <!-- Hidden package field - will be set by JavaScript -->
+        <input type="hidden" name="package" id="selected_package" value="bundle">
 
         <!-- Name Field -->
         <div class="mb-6">
@@ -57,7 +45,8 @@
             <input 
                 type="text" 
                 id="name"
-                wire:model.live="name"
+                name="name"
+                value="<?php echo e(old('name')); ?>"
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ghee-gold focus:border-transparent font-bengali <?php $__errorArgs = ['name'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -67,8 +56,9 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>"
                 placeholder="আপনার পূর্ণ নাম লিখুন"
+                required
             >
-            <!--[if BLOCK]><![endif]--><?php $__errorArgs = ['name'];
+            <?php $__errorArgs = ['name'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -77,7 +67,7 @@ $message = $__bag->first($__errorArgs[0]); ?>
             <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
+unset($__errorArgs, $__bag); ?>
         </div>
 
         <!-- Mobile Field -->
@@ -88,7 +78,8 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
             <input 
                 type="tel" 
                 id="mobile"
-                wire:model.live="mobile"
+                name="mobile"
+                value="<?php echo e(old('mobile')); ?>"
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ghee-gold focus:border-transparent <?php $__errorArgs = ['mobile'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -99,8 +90,9 @@ endif;
 unset($__errorArgs, $__bag); ?>"
                 placeholder="01712345678"
                 maxlength="11"
+                required
             >
-            <!--[if BLOCK]><![endif]--><?php $__errorArgs = ['mobile'];
+            <?php $__errorArgs = ['mobile'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -109,7 +101,7 @@ $message = $__bag->first($__errorArgs[0]); ?>
             <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
+unset($__errorArgs, $__bag); ?>
             <p class="mt-1 text-xs text-gray-500 font-bengali">উদাহরণ: 01712345678</p>
         </div>
 
@@ -120,7 +112,7 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
             </label>
             <textarea 
                 id="address"
-                wire:model.live="address"
+                name="address"
                 rows="3"
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ghee-gold focus:border-transparent font-bengali <?php $__errorArgs = ['address'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -131,8 +123,9 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>"
                 placeholder="বাড়ির নম্বর, রাস্তার নাম, এলাকা, থানা, জেলা"
-            ></textarea>
-            <!--[if BLOCK]><![endif]--><?php $__errorArgs = ['address'];
+                required
+            ><?php echo e(old('address')); ?></textarea>
+            <?php $__errorArgs = ['address'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -141,9 +134,8 @@ $message = $__bag->first($__errorArgs[0]); ?>
             <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
+unset($__errorArgs, $__bag); ?>
         </div>
-
 
         <!-- Delivery Area -->
         <div class="mb-6">
@@ -152,7 +144,7 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
             </label>
             <select 
                 id="delivery_area"
-                wire:model.live="delivery_area"
+                name="delivery_area"
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ghee-gold focus:border-transparent font-bengali <?php $__errorArgs = ['delivery_area'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -161,12 +153,13 @@ $message = $__bag->first($__errorArgs[0]); ?> border-red-500 <?php unset($messag
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>"
+                required
             >
                 <option value="">ডেলিভারি এলাকা নির্বাচন করুন</option>
-                <option value="dhaka">ঢাকার ভিতরে</option>
-                <option value="outside">ঢাকার বাইরে</option>
+                <option value="dhaka" <?php echo e(old('delivery_area') == 'dhaka' ? 'selected' : ''); ?>>ঢাকার ভিতরে</option>
+                <option value="outside" <?php echo e(old('delivery_area') == 'outside' ? 'selected' : ''); ?>>ঢাকার বাইরে</option>
             </select>
-            <!--[if BLOCK]><![endif]--><?php $__errorArgs = ['delivery_area'];
+            <?php $__errorArgs = ['delivery_area'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -175,47 +168,34 @@ $message = $__bag->first($__errorArgs[0]); ?>
             <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
+unset($__errorArgs, $__bag); ?>
         </div>
 
         <!-- Order Summary -->
         <div class="bg-gray-50 rounded-lg p-6 mb-6">
             <h4 class="text-lg font-bold text-gray-900 font-bengali mb-4">অর্ডার সামারি</h4>
             
-            <div class="space-y-2 text-gray-700 font-bengali">
-                <!--[if BLOCK]><![endif]--><?php if($package === 'single'): ?>
-                    <div class="flex justify-between">
-                        <span>সিঙ্গেল প্যাক (৩০০গ্রাম × ১টি)</span>
-                        <span>৳৮৭০</span>
-                    </div>
-                <?php else: ?>
-                    <div class="flex justify-between">
-                        <span>বান্ডেল প্যাক (৩০০গ্রাম × ২টি)</span>
-                        <span>৳১৫৩০</span>
-                    </div>
-                    <div class="flex justify-between text-green-600">
-                        <span>সাশ্রয়</span>
-                        <span>-৳২১০</span>
-                    </div>
-                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+            <div class="space-y-2 text-gray-700 font-bengali" id="order-summary">
+                <div class="flex justify-between">
+                    <span id="package-name">বান্ডেল প্যাক (৩০০গ্রাম × ২টি)</span>
+                    <span id="package-price">৳১৫৩০</span>
+                </div>
+                
+                <div class="flex justify-between text-green-600" id="savings-row">
+                    <span>সাশ্রয়</span>
+                    <span>-৳২১০</span>
+                </div>
                 
                 <div class="flex justify-between">
                     <span>ডেলিভারি চার্জ</span>
-                    <span>
-                        <!--[if BLOCK]><![endif]--><?php if($package === 'bundle' && $delivery_area === 'dhaka'): ?>
-                            <span class="text-green-600">ফ্রি</span>
-                        <?php else: ?>
-                            ৳<?php echo e($delivery_area === 'dhaka' ? '100' : '150'); ?>
-
-                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
-                    </span>
+                    <span id="delivery-charge">ডেলিভারি এলাকা অনুযায়ী</span>
                 </div>
                 
                 <hr class="my-3">
                 
                 <div class="flex justify-between text-xl font-bold text-ghee-gold">
                     <span>মোট</span>
-                    <span>৳<?php echo e(number_format($total)); ?></span>
+                    <span id="total-price">৳১৫৩০</span>
                 </div>
             </div>
         </div>
@@ -235,28 +215,15 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
 
         <!-- Submit Button -->
         <button 
-            type="button"
-            wire:click="submitOrder"
-            wire:loading.attr="disabled"
-            wire:target="submitOrder"
-            <?php if($isSubmitting): ?> disabled <?php endif; ?>
-            class="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold text-xl py-4 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 font-bengali disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+            type="submit"
+            class="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold text-xl py-4 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 font-bengali"
         >
-            <span wire:loading.remove wire:target="submitOrder">
-                <div class="flex items-center justify-center">
-                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                    অর্ডার কনফার্ম করুন
-                </div>
-            </span>
-            <span wire:loading wire:target="submitOrder" class="flex items-center justify-center">
-                <svg class="animate-spin -ml-1 mr-3 h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            <div class="flex items-center justify-center">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
-                অর্ডার প্রসেস হচ্ছে...
-            </span>
+                অর্ডার কনফার্ম করুন
+            </div>
         </button>
 
         <!-- Trust Indicators -->
@@ -277,4 +244,86 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
             </div>
         </div>
     </form>
-</div><?php /**PATH /Users/asifnewaz/Bonobhumi/resources/views/livewire/contact-form.blade.php ENDPATH**/ ?>
+</div>
+
+<script>
+// Scroll to success message on page load if it exists
+document.addEventListener('DOMContentLoaded', function() {
+    <?php if(session('success')): ?>
+        setTimeout(function() {
+            document.getElementById('checkout').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }, 100);
+    <?php endif; ?>
+});
+
+// Update order summary when delivery area changes
+document.getElementById('delivery_area').addEventListener('change', function() {
+    updateOrderSummary();
+});
+
+function updateOrderSummary() {
+    const package = document.getElementById('selected_package').value;
+    const deliveryArea = document.getElementById('delivery_area').value;
+    
+    let packagePrice = 0;
+    let packageName = '';
+    let showSavings = false;
+    let deliveryCharge = 0;
+    let deliveryText = '';
+    
+    if (package === 'bundle') {
+        packagePrice = 1530;
+        packageName = 'বান্ডেল প্যাক (৩০০গ্রাম × ২টি)';
+        showSavings = true;
+        
+        if (deliveryArea === 'dhaka') {
+            deliveryCharge = 0;
+            deliveryText = 'ফ্রি';
+        } else if (deliveryArea === 'outside') {
+            deliveryCharge = 150;
+            deliveryText = '৳১৫০';
+        } else {
+            deliveryText = 'ডেলিভারি এলাকা অনুযায়ী';
+        }
+    } else {
+        packagePrice = 870;
+        packageName = 'সিঙ্গেল প্যাক (৩০০গ্রাম × ১টি)';
+        showSavings = false;
+        
+        if (deliveryArea === 'dhaka') {
+            deliveryCharge = 100;
+            deliveryText = '৳১০০';
+        } else if (deliveryArea === 'outside') {
+            deliveryCharge = 150;
+            deliveryText = '৳১৫০';
+        } else {
+            deliveryText = 'ডেলিভারি এলাকা অনুযায়ী';
+        }
+    }
+    
+    const total = packagePrice + deliveryCharge;
+    
+    // Update display
+    document.getElementById('package-name').textContent = packageName;
+    document.getElementById('package-price').textContent = '৳' + packagePrice;
+    document.getElementById('delivery-charge').textContent = deliveryText;
+    document.getElementById('total-price').textContent = '৳' + (deliveryArea ? total.toLocaleString() : packagePrice.toLocaleString());
+    
+    // Show/hide savings row
+    const savingsRow = document.getElementById('savings-row');
+    if (showSavings) {
+        savingsRow.style.display = 'flex';
+    } else {
+        savingsRow.style.display = 'none';
+    }
+}
+
+// Listen for package selection changes from Alpine.js
+window.addEventListener('packageChanged', function(event) {
+    document.getElementById('selected_package').value = event.detail.package;
+    updateOrderSummary();
+});
+</script><?php /**PATH /Users/asifnewaz/Bonobhumi/resources/views/order-form.blade.php ENDPATH**/ ?>
