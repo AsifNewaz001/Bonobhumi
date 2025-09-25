@@ -1,4 +1,4 @@
-<footer style="background-color: #FFFDEE;">
+<footer class="bg-cover bg-center bg-no-repeat" style="background-image: url('{{ asset('footer.png') }}');">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <!-- Policy Links -->
         <div class="text-center mb-4">

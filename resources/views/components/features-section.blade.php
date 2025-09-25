@@ -29,10 +29,10 @@
                 
                 <!-- CTA Button -->
                 <div class="pt-4">
-                    <a href="#checkout" class="inline-block px-10 py-5 rounded-lg text-white font-bold transition-all duration-300 hover:shadow-lg transform hover:scale-105" 
-                       style="font-family: 'Hind Siliguri', sans-serif; font-size: clamp(18px, 5vw, 22px); background: linear-gradient(0deg, #059845 0%, #018038 100%); border: 2px solid #DEE6E2;">
+                    <button onclick="document.getElementById('order-form').scrollIntoView({behavior: 'smooth'})" class="px-10 py-5 rounded-lg text-white font-bold transition-all duration-300 hover:shadow-lg transform hover:scale-105 bg-emerald-600 hover:bg-emerald-700" 
+                       style="font-family: 'Hind Siliguri', sans-serif; font-size: clamp(18px, 5vw, 22px);">
                         এখনই অর্ডার করুন
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -51,10 +51,10 @@
                     বনভূমি A2 সরের ঘি
                 </h2>
                 
-                <a href="#checkout" class="inline-block px-12 py-6 rounded-lg text-white font-bold text-2xl transition-all duration-300 hover:shadow-lg transform hover:scale-105" 
-                   style="font-family: 'Hind Siliguri', sans-serif; background: linear-gradient(0deg, #059845 0%, #018038 100%); border: 2px solid #DEE6E2;">
+                <button onclick="document.getElementById('order-form').scrollIntoView({behavior: 'smooth'})" class="px-12 py-6 rounded-lg text-white font-bold text-2xl transition-all duration-300 hover:shadow-lg transform hover:scale-105 bg-emerald-600 hover:bg-emerald-700" 
+                   style="font-family: 'Hind Siliguri', sans-serif;">
                     এখনই অর্ডার করুন
-                </a>
+                </button>
             </div>
         </div>
         

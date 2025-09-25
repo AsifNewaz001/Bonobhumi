@@ -33,7 +33,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
-<body class="font-english antialiased bg-gray-50">
+<body class="font-english antialiased bg-white">
 
     <!-- Main Content -->
     <main>
@@ -46,14 +46,14 @@
         <!-- Comparison Section -->
         @include('components.comparison-section')
         
+        <!-- Certificate Section -->
+        @include('components.certificate-section')
+        
         <!-- Ata Section -->
         @include('components.ata-section')
         
         <!-- Review Section -->
         @include('components.review-section')
-        
-        <!-- Combined Checkout Section -->
-        @include('components.checkout-section')
         
         <!-- FAQ Section -->
         <section class="py-16 bg-cover bg-center bg-no-repeat relative" style="background-image: url('{{ asset('faq2.png') }}');">
@@ -67,6 +67,12 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Pricing Section -->
+        @include('components.pricing-section')
+        
+        <!-- Combined Checkout Section -->
+        @include('components.checkout-section')
     </main>
 
     <!-- Footer -->
