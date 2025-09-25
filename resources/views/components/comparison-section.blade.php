@@ -1,23 +1,27 @@
-<section id="comparison" class="py-16 relative overflow-hidden" style="background: #FEFDFB; min-height: 100vh;">
+<section id="comparison" class="py-12 relative overflow-hidden" style="background: #FEFDFB;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Title -->
-        <div class="text-center mb-8">
-            <h2 class="mb-4" style="font-family: 'Hind Siliguri', sans-serif; font-weight: 600; font-size: 48px; color: #604D20; line-height: 1.1;">
+        <div class="text-center mb-6">
+            <h2 class="mb-3" style="font-family: 'Hind Siliguri', sans-serif; font-weight: 600; font-size: 32px; color: #604D20; line-height: 1.2;">
                 সাধারন ঘি ও বনভূমি সরের ঘি এর মধ্যে তফাৎ কোথায়?
             </h2>
-            <div class="mx-auto" style="width: 128px; height: 6px; background-color: #F59E0B;"></div>
+            <div class="mx-auto" style="width: 96px; height: 4px; background-color: #F59E0B;"></div>
         </div>
 
         <!-- Mobile Layout -->
-        <div class="lg:hidden space-y-8">
+        <div class="lg:hidden space-y-6">
             <!-- Mobile Title and Image -->
             <div class="text-center">
-                <img src="{{ asset('gheefire.png') }}" alt="ঘি তৈরির প্রক্রিয়া" class="w-full max-w-md mx-auto mb-8">
+                <img src="{{ asset('3Gee.png') }}" alt="ঘি তৈরির প্রক্রিয়া" class="w-full max-w-sm mx-auto mb-4">
+                <a href="#checkout" class="inline-block px-6 py-3 rounded-lg text-white font-bold text-base transition-all duration-300 hover:shadow-lg transform hover:scale-105 mb-6" 
+                   style="font-family: 'Hind Siliguri', sans-serif; background: linear-gradient(0deg, #059845 0%, #018038 100%); border: 2px solid #DEE6E2;">
+                    এখনই অর্ডার করুন
+                </a>
             </div>
             
             <!-- Mobile Content Boxes -->
-            <div class="space-y-6">
+            <div class="space-y-4">
                 <!-- Left Side Content for Mobile -->
                 <div class="bg-white rounded-lg p-6 shadow-sm">
                     <div class="flex items-start space-x-4">
@@ -33,7 +37,7 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-lg font-bold mb-2" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">উৎকৃষ্ট সর থেকে তৈরি</h3>
+                            <h3 class="text-base font-bold mb-2" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">উৎকৃষ্ট সর থেকে তৈরি</h3>
                             <p style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">কাঁচা দুধ নয়, বনভূমি সরের ঘি তৈরি হয় ১০০% দেশি গরুর দুধ জ্বাল/ফুটানোর পর তোলা সর দিয়ে</p>
                         </div>
                     </div>
@@ -142,11 +146,11 @@
 
         <!-- Desktop Layout -->
         <div class="hidden lg:block">
-            <div class="grid grid-cols-3 gap-8 items-center min-h-screen">
+            <div class="grid grid-cols-3 gap-6 items-start">
                 
                 <!-- Left Side Boxes -->
-                <div class="space-y-8">
-                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
                         <div class="flex items-start space-x-4">
                             <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #FFFBEB;">
                                 <svg class="w-6 h-6" style="color: #D97706;" fill="currentColor" viewBox="0 0 20 20">
@@ -154,13 +158,13 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold mb-3" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">উৎকৃষ্ট সর থেকে তৈরি</h3>
-                                <p style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">কাঁচা দুধ নয়, বনভূমি সরের ঘি তৈরি হয় ১০০% দেশি গরুর দুধ জ্বাল/ফুটানোর পর তোলা সর দিয়ে</p>
+                                <h3 class="text-base font-bold mb-2" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">উৎকৃষ্ট সর থেকে তৈরি</h3>
+                                <p class="text-sm" style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">কাঁচা দুধ নয়, বনভূমি সরের ঘি তৈরি হয় ১০০% দেশি গরুর দুধ জ্বাল/ফুটানোর পর তোলা সর দিয়ে</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
                         <div class="flex items-start space-x-4">
                             <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #FFFBEB;">
                                 <svg class="w-6 h-6" style="color: #D97706;" fill="currentColor" viewBox="0 0 20 20">
@@ -168,13 +172,13 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold mb-3" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">শুধুমাত্র দেশি গরু</h3>
-                                <p style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">জার্সি, ফ্রিজিয়ান, হোলস্টেইনের মতো পশ্চিমা জাতের গরুর দুধ নয়, বরং শুধুমাত্র দেশি মাঠে ঘাস খাওয়া গরুর দুধ থেকে তৈরী</p>
+                                <h3 class="text-base font-bold mb-2" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">শুধুমাত্র দেশি গরু</h3>
+                                <p class="text-sm" style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">জার্সি, ফ্রিজিয়ান, হোলস্টেইনের মতো পশ্চিমা জাতের গরুর দুধ নয়, বরং শুধুমাত্র দেশি মাঠে ঘাস খাওয়া গরুর দুধ থেকে তৈরী</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
                         <div class="flex items-start space-x-4">
                             <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #FFFBEB;">
                                 <svg class="w-6 h-6" style="color: #D97706;" fill="currentColor" viewBox="0 0 20 20">
@@ -182,13 +186,13 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold mb-3" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">A2 বিটা-কেসিন প্রোটিন</h3>
-                                <p style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">বাজারের সাধারণ ঘিতে যা নেই, বনভূমি ঘি সেই A2 বিটা-কেসিন প্রোটিনে সমৃদ্ধ।</p>
+                                <h3 class="text-base font-bold mb-2" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">A2 বিটা-কেসিন প্রোটিন</h3>
+                                <p class="text-sm" style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">বাজারের সাধারণ ঘিতে যা নেই, বনভূমি ঘি সেই A2 বিটা-কেসিন প্রোটিনে সমৃদ্ধ।</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
                         <div class="flex items-start space-x-4">
                             <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #FFFBEB;">
                                 <svg class="w-6 h-6" style="color: #D97706;" fill="currentColor" viewBox="0 0 20 20">
@@ -196,21 +200,25 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold mb-3" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">সার্বিক স্বাস্থ্যের উন্নতি</h3>
-                                <p style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">এই ঘি হার্টের অসুখ থেকে শুরু করে ডায়াবেটিস রোধ করতে সাহায্য করে ও লিভার ভাল রাখে।</p>
+                                <h3 class="text-base font-bold mb-2" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">সার্বিক স্বাস্থ্যের উন্নতি</h3>
+                                <p class="text-sm" style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">এই ঘি হার্টের অসুখ থেকে শুরু করে ডায়াবেটিস রোধ করতে সাহায্য করে ও লিভার ভাল রাখে।</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Middle - Huge Image -->
-                <div class="flex justify-center items-center h-full">
-                    <img src="{{ asset('gheefire.png') }}" alt="ঘি তৈরির প্রক্রিয়া" class="h-full w-auto object-contain max-h-screen">
+                <!-- Middle - Image with CTA -->
+                <div class="flex flex-col justify-start items-center pt-8">
+                    <img src="{{ asset('3Gee.png') }}" alt="ঘি তৈরির প্রক্রিয়া" class="w-auto object-contain max-h-64 mb-6">
+                    <a href="#checkout" class="inline-block px-8 py-4 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:shadow-lg transform hover:scale-105" 
+                       style="font-family: 'Hind Siliguri', sans-serif; background: linear-gradient(0deg, #059845 0%, #018038 100%); border: 2px solid #DEE6E2;">
+                        এখনই অর্ডার করুন
+                    </a>
                 </div>
 
                 <!-- Right Side Boxes -->
-                <div class="space-y-8">
-                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
                         <div class="flex items-start space-x-4">
                             <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #FFFBEB;">
                                 <svg class="w-6 h-6" style="color: #D97706;" fill="currentColor" viewBox="0 0 20 20">
@@ -218,13 +226,13 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold mb-3" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">ঐতিহ্যবাহী বিলোনা পদ্ধতি</h3>
-                                <p style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">মেশিন নয়, গ্রামীণ ঐতিহ্য অনুযায়ী কোল্ডপ্রেস/বিলোনা পদ্ধতিতে স্বাস্থ্যসম্মত ও ঘরোয়া উপায়ে তৈরি হয় এই ঘি।</p>
+                                <h3 class="text-base font-bold mb-2" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">ঐতিহ্যবাহী বিলোনা পদ্ধতি</h3>
+                                <p class="text-sm" style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">মেশিন নয়, গ্রামীণ ঐতিহ্য অনুযায়ী কোল্ডপ্রেস/বিলোনা পদ্ধতিতে স্বাস্থ্যসম্মত ও ঘরোয়া উপায়ে তৈরি হয় এই ঘি।</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
                         <div class="flex items-start space-x-4">
                             <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #FFFBEB;">
                                 <svg class="w-6 h-6" style="color: #D97706;" fill="currentColor" viewBox="0 0 20 20">
@@ -232,13 +240,13 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold mb-3" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">সহজপাচ্য ও স্বাস্থ্যকর</h3>
-                                <p style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">যাঁদের আইবিএস বা হজমের সমস্যা রয়েছে। কিংবা যাঁরা ল্যাকটোজ ইন্টলারেন্ট, অর্থাৎ দুগ্ধজাত খাবার খেতে পারেন না, তাঁরাও এই নিশ্চিন্তে ঘি খেতে পারবেন।</p>
+                                <h3 class="text-base font-bold mb-2" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">সহজপাচ্য ও স্বাস্থ্যকর</h3>
+                                <p class="text-sm" style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">যাঁদের আইবিএস বা হজমের সমস্যা রয়েছে। কিংবা যাঁরা ল্যাকটোজ ইন্টলারেন্ট, অর্থাৎ দুগ্ধজাত খাবার খেতে পারেন না, তাঁরাও এই নিশ্চিন্তে ঘি খেতে পারবেন।</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
                         <div class="flex items-start space-x-4">
                             <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #FFFBEB;">
                                 <svg class="w-6 h-6" style="color: #D97706;" fill="currentColor" viewBox="0 0 20 20">
@@ -246,13 +254,13 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold mb-3" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">ভিটামিন ও ওমেগা-৩ সমৃদ্ধ</h3>
-                                <p style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">এই ঘিতে রয়েছে ভিটামিন A, D, E, K ও ওমেগা-৩ যা শিশুর ব্রেইন ডেভেলপমেন্ট করতে সাহায্য করে</p>
+                                <h3 class="text-base font-bold mb-2" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">ভিটামিন ও ওমেগা-৩ সমৃদ্ধ</h3>
+                                <p class="text-sm" style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">এই ঘিতে রয়েছে ভিটামিন A, D, E, K ও ওমেগা-৩ যা শিশুর ব্রেইন ডেভেলপমেন্ট করতে সাহায্য করে</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
                         <div class="flex items-start space-x-4">
                             <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #FFFBEB;">
                                 <svg class="w-6 h-6" style="color: #D97706;" fill="currentColor" viewBox="0 0 20 20">
@@ -260,8 +268,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold mb-3" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">নিবিড় যত্ন ও সেরা প্যাকেজিং</h3>
-                                <p style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">প্রতি ফোটা ঘি তৈরী হয় নিবিড় যত্নে ও ডেলিভারি করা হয় ফুড গ্রেড কাচের জারে।</p>
+                                <h3 class="text-base font-bold mb-2" style="font-family: 'Hind Siliguri', sans-serif; color: #92400E;">নিবিড় যত্ন ও সেরা প্যাকেজিং</h3>
+                                <p class="text-sm" style="font-family: 'Hind Siliguri', sans-serif; color: #4B5563;">প্রতি ফোটা ঘি তৈরী হয় নিবিড় যত্নে ও ডেলিভারি করা হয় ফুড গ্রেড কাচের জারে।</p>
                             </div>
                         </div>
                     </div>

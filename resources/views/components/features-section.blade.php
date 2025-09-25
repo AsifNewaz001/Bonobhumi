@@ -1,58 +1,42 @@
-<section id="features" class="py-16 relative overflow-hidden" style="background: #ffffff;">
-    <!-- Background gradient with extended coverage and lower opacity -->
-    <div class="hidden lg:block absolute -top-4 -left-4 w-full h-full" 
-         style="background: linear-gradient(165deg, rgba(252, 224, 133, 0.6) 0%, rgba(255, 234, 157, 0.5) 50%, rgba(246, 207, 95, 0.4) 100%);
-                clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 95%);
-                width: calc(100% + 40px);
-                height: calc(100% + 40px);">
-    </div>
+<section id="features" class="py-16 relative overflow-hidden bg-center bg-no-repeat" style="background-image: url('{{ asset('2ndG2.png') }}'); background-size: cover; background-position: center;">
     
-    <div class="hidden lg:block absolute top-0 left-0 w-full h-full" 
-         style="background: linear-gradient(165deg, #FCE085 0%, #FFEA9D 50%, #F6CF5F 100%);
-                clip-path: polygon(0% 0%, 100% 15%, 75% 90%, 0% 85%);">
-    </div>
+    <!-- Mobile responsive background styles -->
+    <style>
+        @media (max-width: 768px) {
+            #features {
+                background-image: url('{{ asset('M2ndSection.png') }}') !important;
+                background-size: cover !important;
+                background-position: center center !important;
+                min-height: 100vh;
+            }
+        }
+    </style>
     
-    <div class="hidden lg:block absolute top-0 left-0 w-full h-full" 
-         style="background: linear-gradient(165deg, rgba(246, 207, 95, 0.6) 0%, rgba(255, 234, 157, 0.4) 50%, rgba(252, 224, 133, 0.2) 100%);
-                clip-path: polygon(75% 90%, 100% 15%, 100% 91.7%);">
-    </div>
+    <!-- Optional overlay for better text readability -->
+    <div class="absolute inset-0 bg-white bg-opacity-10"></div>
     
-    <!-- Mobile gradient - clean diagonal slant -->
-    <div class="lg:hidden absolute top-0 left-0 w-full h-full" 
-         style="background: linear-gradient(165deg, #FCE085 0%, #FFEA9D 50%, #F6CF5F 100%);
-                clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);">
-    </div>
-    
-    <!-- Mobile Layout - Compact Design -->
-    <div class="lg:hidden relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <!-- Ghee Jars - Top Centered -->
-            <div class="flex justify-center mb-4">
-                <img src="{{ asset('Ghee3.png') }}" alt="বনভূমি A2 সরের ঘি" class="w-full max-w-sm object-contain drop-shadow-lg">
-            </div>
-            
-            <!-- Text Content - Consistent Typography -->
-            <div class="text-center mb-2">
-                <p class="text-center mb-4" style="font-family: 'Hind Siliguri', sans-serif; font-weight: 600; font-size: 28px; color: #614e21; line-height: 1.1;">
+    <!-- Mobile Layout - Improved Responsive Design -->
+    <div class="lg:hidden relative z-10 min-h-screen flex items-start pt-32">
+        <div class="w-full px-4 sm:px-6">
+            <!-- Text Content - Mobile Optimized -->
+            <div class="text-center space-y-6">
+                <p class="text-center" style="font-family: 'Hind Siliguri', sans-serif; font-weight: 600; font-size: clamp(24px, 6vw, 30px); color: #614e21; line-height: 1.2;">
                     ঐতিহ্যের সেই স্বাদ পেতে সংগ্রহ করুন
                 </p>
-                <h2 class="text-center mb-6" style="font-family: 'Hind Siliguri', sans-serif; font-weight: 600; font-size: 48px; color: #614e21; line-height: 1.1;">
+                <h2 class="text-center" style="font-family: 'Hind Siliguri', sans-serif; font-weight: 600; font-size: clamp(36px, 10vw, 48px); color: #614e21; line-height: 1.1;">
                     বনভূমি A2 সরের ঘি
                 </h2>
                 
                 <!-- CTA Button -->
-                <a href="#checkout" class="inline-block px-6 py-3 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:shadow-lg transform hover:scale-105" 
-                   style="font-family: 'Hind Siliguri', sans-serif; background: linear-gradient(0deg, #059845 0%, #018038 100%); border: 2px solid #DEE6E2;">
-                    এখনই অর্ডার করুন
-                </a>
+                <div class="pt-4">
+                    <a href="#checkout" class="inline-block px-10 py-5 rounded-lg text-white font-bold transition-all duration-300 hover:shadow-lg transform hover:scale-105" 
+                       style="font-family: 'Hind Siliguri', sans-serif; font-size: clamp(18px, 5vw, 22px); background: linear-gradient(0deg, #059845 0%, #018038 100%); border: 2px solid #DEE6E2;">
+                        এখনই অর্ডার করুন
+                    </a>
+                </div>
             </div>
-            
         </div>
         
-        <!-- Model Image - Bottom Positioned without container padding -->
-        <div class="mt-0">
-            <img src="{{ asset('model.png') }}" alt="Model" class="w-full h-auto object-contain object-right">
-        </div>
     </div>
 
     <div class="hidden lg:block relative w-full h-screen overflow-hidden z-10">
@@ -74,14 +58,6 @@
             </div>
         </div>
         
-        <!-- Product Jars - Exactly Middle, Much Bigger and Overlapping -->
-        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30">
-            <img src="{{ asset('Ghee3.png') }}" alt="বনভূমি A2 সরের ঘি" class="w-[480px] h-auto object-contain">
-        </div>
         
-        <!-- Model Image - Bottom-Right -->
-        <div class="absolute right-0 bottom-0 h-full">
-            <img src="{{ asset('model.png') }}" alt="Model" class="h-full w-auto object-cover object-left">
-        </div>
     </div>
 </section>

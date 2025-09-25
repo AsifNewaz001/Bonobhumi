@@ -46,11 +46,17 @@
         <!-- Comparison Section -->
         @include('components.comparison-section')
         
+        <!-- Ata Section -->
+        @include('components.ata-section')
+        
+        <!-- Review Section -->
+        @include('components.review-section')
+        
         <!-- Combined Checkout Section -->
         @include('components.checkout-section')
         
         <!-- FAQ Section -->
-        <section class="py-16 bg-cover bg-center bg-no-repeat relative" style="background-image: url('{{ asset('bgFAQ.png') }}');">
+        <section class="py-16 bg-cover bg-center bg-no-repeat relative" style="background-image: url('{{ asset('faq2.png') }}');">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center lg:justify-end">
                 <div class="max-w-4xl lg:mr-8">
                 <div class="text-center mb-12">
