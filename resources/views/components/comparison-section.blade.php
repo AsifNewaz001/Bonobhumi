@@ -2,15 +2,15 @@
     <!-- Mobile Layout (≤ md) -->
     <div class="max-w-screen-sm mx-auto px-4 py-6 bg-transparent lg:hidden">
         <!-- Section Title -->
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4" style="font-family: 'Hind Siliguri', sans-serif; color: #604D20;">
+        <div class="text-center mb-6">
+            <h2 class="font-bold leading-tight mb-4" style="font-family: 'Hind Siliguri', sans-serif; color: #604D20; font-size: clamp(24px, 5vw, 48px);">
                 সাধারণ ঘি ও বনভূমি সরের ঘি এর মধ্যে তফাৎ কোথায়?
             </h2>
             <div class="w-24 h-1 mx-auto" style="background-color: #F59E0B;"></div>
         </div>
         
         <!-- Product Image -->
-        <div class="w-80 h-80 mx-auto relative mb-4 mt-12">
+        <div class="w-80 h-80 mx-auto relative mb-4 mt-6">
             <img src="{{ asset('3Gee.png') }}" alt="ঘি তৈরির প্রক্রিয়া" class="absolute inset-0 m-auto w-full h-full object-contain drop-shadow-lg">
         </div>
         
@@ -115,7 +115,7 @@
     <div class="hidden lg:block max-w-6xl mx-auto px-6 py-10">
         <!-- Section Title -->
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4" style="font-family: 'Hind Siliguri', sans-serif; color: #604D20;">
+            <h2 class="font-bold leading-tight mb-4" style="font-family: 'Hind Siliguri', sans-serif; color: #604D20; font-size: clamp(24px, 5vw, 48px);">
                 সাধারণ ঘি ও বনভূমি সরের ঘি এর মধ্যে তফাৎ কোথায়?
             </h2>
             <div class="w-24 h-1 mx-auto" style="background-color: #F59E0B;"></div>

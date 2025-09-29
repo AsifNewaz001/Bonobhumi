@@ -3,10 +3,10 @@
         
         <!-- Section Heading -->
         <div class="text-center mb-12">
-            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2" style="font-family: 'Hind Siliguri', sans-serif;">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2" style="font-family: 'Hind Siliguri', sans-serif; color: #604D20;">
                 বনভূমি A2 সরের ঘি নিয়ে
             </h2>
-            <p class="text-xl md:text-2xl font-bold text-orange-600" style="font-family: 'Hind Siliguri', sans-serif;">
+            <p class="text-xl md:text-2xl font-bold text-orange-600" style="font-family: 'Hind Siliguri', sans-serif; color: #604D20;">
                 মানুষ যা বলাবলি করছে
             </p>
         </div>

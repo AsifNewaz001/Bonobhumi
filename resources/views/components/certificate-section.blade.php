@@ -2,7 +2,7 @@
     
     <!-- Heading -->
     <div class="text-center mb-12">
-        <h2 class="font-bold text-white text-shadow-lg" style="font-family: 'Hind Siliguri', sans-serif; font-size: clamp(24px, 5vw, 48px); line-height: 1.2; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+        <h2 class="font-bold text-white text-shadow-lg" style="font-family: 'Hind Siliguri', sans-serif; font-size: clamp(24px, 5vw, 48px); color: #FFFFFF; line-height: 1.2; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
             ১০০% খাঁটি ও বিএসটিআই অনুমোদিত (সার্টিফিকেশন)
         </h2>
     </div>

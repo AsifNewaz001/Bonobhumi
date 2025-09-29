@@ -33,7 +33,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
         <div class="text-center mb-12">
-            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8" style="font-family: 'Hind Siliguri', sans-serif;">
+            <h2 class="font-bold text-gray-900 mb-8" style="font-family: 'Hind Siliguri', sans-serif; font-size: clamp(24px, 5vw, 48px); color: #604D20;">
                 সীমিত সময়ের অফার
             </h2>
         </div>
@@ -129,9 +129,28 @@
         <!-- Testimonial Videos Section -->
         @include('components.testimonial-videos-section')
 
+        <!-- Review Image Section -->
+        <div class="py-12 relative overflow-hidden" style="background: #ffffff;">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Mobile Layout -->
+                <div class="lg:hidden">
+                    <div class="text-center">
+                        <img src="{{ asset('review.png') }}" alt="রিভিউ" class="w-full max-w-lg mx-auto">
+                    </div>
+                </div>
+
+                <!-- Desktop Layout -->
+                <div class="hidden lg:block">
+                    <div class="flex justify-center items-center">
+                        <img src="{{ asset('review.png') }}" alt="রিভিউ" class="w-auto max-w-5xl mx-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Order Form Header -->
         <div class="text-center mb-12" id="order-form">
-            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900" style="font-family: 'Hind Siliguri', sans-serif;">
+            <h2 class="font-bold text-gray-900" style="font-family: 'Hind Siliguri', sans-serif; font-size: clamp(24px, 5vw, 48px); color: #604D20;">
                 অর্ডার করতে নিচের ফর্মটি পূরণ করুন
             </h2>
         </div>

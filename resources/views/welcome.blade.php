@@ -52,9 +52,6 @@
         <!-- Ata Section -->
         @include('components.ata-section')
         
-        <!-- Review Section -->
-        @include('components.review-section')
-        
         <!-- FAQ Section -->
         <section class="py-16 bg-cover bg-center bg-no-repeat relative" style="background-image: url('{{ asset('faq2.png') }}');">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center lg:justify-end">

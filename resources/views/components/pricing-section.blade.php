@@ -3,11 +3,11 @@
         
         <!-- Section Heading -->
         <div class="text-center mb-12">
-            <h2 class="font-bold mb-4" style="font-family: 'Hind Siliguri', sans-serif; font-size: 48px; color: #604D20;">
+            <h2 class="font-bold mb-4" style="font-family: 'Hind Siliguri', sans-serif; font-size: clamp(28px, 5vw, 48px); color: #604D20;">
                 পছন্দের প্যাকেজটি সিলেক্ট করুন
             </h2>
             <div class="inline-block bg-orange-500 px-4 py-1 rounded-full">
-                <p class="font-semibold text-white" style="font-family: 'Hind Siliguri', sans-serif; font-size: 24px;">
+                <p class="font-semibold text-white" style="font-family: 'Hind Siliguri', sans-serif; font-size: clamp(16px, 4vw, 24px);">
                     আর উপভোগ করুন হারানো ঐতিহ্যের স্বাদ
                 </p>
             </div>
