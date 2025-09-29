@@ -1,3 +1,34 @@
+<!-- Import Share Tech Font -->
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono:wght@400&display=swap" rel="stylesheet">
+
+<style>
+/* Flipping animation styles */
+.digit-flip {
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.digit-flip.flipping {
+    animation: flipUp 0.6s ease-in-out;
+}
+
+@keyframes flipUp {
+    0% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(-90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.digit-container {
+    perspective: 1000px;
+}
+</style>
+
 <section id="checkout" class="py-16 bg-white" x-data="orderForm()">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
@@ -15,36 +46,72 @@
             <div class="flex justify-center items-center space-x-4 sm:space-x-6 mb-8">
                 <!-- Days -->
                 <div class="text-center">
-                    <div class="bg-green-600 rounded-lg p-4 sm:p-6 shadow-lg relative overflow-hidden">
-                        <div class="absolute inset-x-0 top-1/2 h-px bg-black opacity-30"></div>
-                        <div class="text-3xl md:text-4xl font-bold text-white" style="font-family: 'Hind Siliguri', sans-serif;" x-text="days">০২</div>
+                    <div class="rounded-lg p-4 sm:p-6 shadow-lg relative overflow-hidden" style="background-color: #1BAA76;">
+                        <!-- Middle line with rounded circles -->
+                        <div class="absolute inset-x-0 top-1/2 h-1 bg-black bg-opacity-20 flex items-center justify-between">
+                            <div class="w-3 h-3 bg-black bg-opacity-20 rounded-full -ml-1.5"></div>
+                            <div class="w-3 h-3 bg-black bg-opacity-20 rounded-full -mr-1.5"></div>
+                        </div>
+                        <!-- Digit container with flip animation -->
+                        <div class="digit-container relative h-20 flex items-center justify-center">
+                            <div class="digit-flip text-6xl font-bold transition-transform duration-300 ease-in-out" 
+                                 style="font-family: 'Share Tech', monospace; color: #F2F2F2; font-size: 56px;" 
+                                 x-text="days">০২</div>
+                        </div>
                     </div>
                     <div class="text-sm font-medium text-gray-700 mt-2" style="font-family: 'Hind Siliguri', sans-serif;">দিন</div>
                 </div>
                 
                 <!-- Hours -->
                 <div class="text-center">
-                    <div class="bg-green-600 rounded-lg p-4 sm:p-6 shadow-lg relative overflow-hidden">
-                        <div class="absolute inset-x-0 top-1/2 h-px bg-black opacity-30"></div>
-                        <div class="text-3xl md:text-4xl font-bold text-white" style="font-family: 'Hind Siliguri', sans-serif;" x-text="hours">১২</div>
+                    <div class="rounded-lg p-4 sm:p-6 shadow-lg relative overflow-hidden" style="background-color: #1BAA76;">
+                        <!-- Middle line with rounded circles -->
+                        <div class="absolute inset-x-0 top-1/2 h-1 bg-black bg-opacity-20 flex items-center justify-between">
+                            <div class="w-3 h-3 bg-black bg-opacity-20 rounded-full -ml-1.5"></div>
+                            <div class="w-3 h-3 bg-black bg-opacity-20 rounded-full -mr-1.5"></div>
+                        </div>
+                        <!-- Digit container with flip animation -->
+                        <div class="digit-container relative h-20 flex items-center justify-center">
+                            <div class="digit-flip text-6xl font-bold transition-transform duration-300 ease-in-out" 
+                                 style="font-family: 'Share Tech', monospace; color: #F2F2F2; font-size: 56px;" 
+                                 x-text="hours">১২</div>
+                        </div>
                     </div>
                     <div class="text-sm font-medium text-gray-700 mt-2" style="font-family: 'Hind Siliguri', sans-serif;">ঘন্টা</div>
                 </div>
                 
                 <!-- Minutes -->
                 <div class="text-center">
-                    <div class="bg-green-600 rounded-lg p-4 sm:p-6 shadow-lg relative overflow-hidden">
-                        <div class="absolute inset-x-0 top-1/2 h-px bg-black opacity-30"></div>
-                        <div class="text-3xl md:text-4xl font-bold text-white" style="font-family: 'Hind Siliguri', sans-serif;" x-text="minutes">২৭</div>
+                    <div class="rounded-lg p-4 sm:p-6 shadow-lg relative overflow-hidden" style="background-color: #1BAA76;">
+                        <!-- Middle line with rounded circles -->
+                        <div class="absolute inset-x-0 top-1/2 h-1 bg-black bg-opacity-20 flex items-center justify-between">
+                            <div class="w-3 h-3 bg-black bg-opacity-20 rounded-full -ml-1.5"></div>
+                            <div class="w-3 h-3 bg-black bg-opacity-20 rounded-full -mr-1.5"></div>
+                        </div>
+                        <!-- Digit container with flip animation -->
+                        <div class="digit-container relative h-20 flex items-center justify-center">
+                            <div class="digit-flip text-6xl font-bold transition-transform duration-300 ease-in-out" 
+                                 style="font-family: 'Share Tech', monospace; color: #F2F2F2; font-size: 56px;" 
+                                 x-text="minutes">২৭</div>
+                        </div>
                     </div>
                     <div class="text-sm font-medium text-gray-700 mt-2" style="font-family: 'Hind Siliguri', sans-serif;">মিনিট</div>
                 </div>
                 
                 <!-- Seconds -->
                 <div class="text-center">
-                    <div class="bg-green-600 rounded-lg p-4 sm:p-6 shadow-lg relative overflow-hidden">
-                        <div class="absolute inset-x-0 top-1/2 h-px bg-black opacity-30"></div>
-                        <div class="text-3xl md:text-4xl font-bold text-white" style="font-family: 'Hind Siliguri', sans-serif;" x-text="seconds">০০</div>
+                    <div class="rounded-lg p-4 sm:p-6 shadow-lg relative overflow-hidden" style="background-color: #1BAA76;">
+                        <!-- Middle line with rounded circles -->
+                        <div class="absolute inset-x-0 top-1/2 h-1 bg-black bg-opacity-20 flex items-center justify-between">
+                            <div class="w-3 h-3 bg-black bg-opacity-20 rounded-full -ml-1.5"></div>
+                            <div class="w-3 h-3 bg-black bg-opacity-20 rounded-full -mr-1.5"></div>
+                        </div>
+                        <!-- Digit container with flip animation -->
+                        <div class="digit-container relative h-20 flex items-center justify-center">
+                            <div class="digit-flip text-6xl font-bold transition-transform duration-300 ease-in-out" 
+                                 style="font-family: 'Share Tech', monospace; color: #F2F2F2; font-size: 56px;" 
+                                 x-text="seconds">০০</div>
+                        </div>
                     </div>
                     <div class="text-sm font-medium text-gray-700 mt-2" style="font-family: 'Hind Siliguri', sans-serif;">সেকেন্ড</div>
                 </div>
@@ -266,6 +333,12 @@ function countdown() {
         hours: '১২',
         minutes: '২৭',
         seconds: '০০',
+        previousValues: {
+            days: '০২',
+            hours: '১২',
+            minutes: '২৭',
+            seconds: '০০'
+        },
         init() {
             // Set end date (2 days, 12 hours, 27 minutes from now)
             const endDate = new Date();
@@ -275,10 +348,41 @@ function countdown() {
             
             this.updateCountdown(endDate);
             
-            // Update every second
+            // Update every second with animation
             setInterval(() => {
-                this.updateCountdown(endDate);
+                this.updateCountdownWithAnimation(endDate);
             }, 1000);
+        },
+        
+        updateCountdownWithAnimation(endDate) {
+            const now = new Date().getTime();
+            const distance = endDate.getTime() - now;
+            
+            let newValues = {
+                days: '০০',
+                hours: '০০',
+                minutes: '০০',
+                seconds: '০০'
+            };
+            
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                // Convert to Bengali numbers
+                newValues.days = this.toBengali(days.toString().padStart(2, '0'));
+                newValues.hours = this.toBengali(hours.toString().padStart(2, '0'));
+                newValues.minutes = this.toBengali(minutes.toString().padStart(2, '0'));
+                newValues.seconds = this.toBengali(seconds.toString().padStart(2, '0'));
+            }
+            
+            // Animate changes
+            this.animateDigitChange('days', newValues.days);
+            this.animateDigitChange('hours', newValues.hours);
+            this.animateDigitChange('minutes', newValues.minutes);
+            this.animateDigitChange('seconds', newValues.seconds);
         },
         
         updateCountdown(endDate) {
@@ -301,6 +405,27 @@ function countdown() {
                 this.hours = '০০';
                 this.minutes = '০০';
                 this.seconds = '০০';
+            }
+        },
+        
+        animateDigitChange(unit, newValue) {
+            if (this.previousValues[unit] !== newValue) {
+                // Find the digit element and add flip animation
+                const digitElements = document.querySelectorAll(`[x-text="${unit}"]`);
+                digitElements.forEach(element => {
+                    element.classList.add('flipping');
+                    
+                    // Update the value after half animation
+                    setTimeout(() => {
+                        this[unit] = newValue;
+                        this.previousValues[unit] = newValue;
+                    }, 300);
+                    
+                    // Remove animation class after completion
+                    setTimeout(() => {
+                        element.classList.remove('flipping');
+                    }, 600);
+                });
             }
         },
         

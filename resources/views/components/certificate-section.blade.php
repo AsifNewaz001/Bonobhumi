@@ -1,4 +1,4 @@
-<section class="py-16 relative overflow-hidden" style="background: linear-gradient(135deg, #10b981 0%, #34d399 50%, #fbbf24 100%);">
+<section class="py-16 relative overflow-hidden" style="background: linear-gradient(135deg, #55B76B 0%, #FFD538 100%);">
     
     <!-- Heading -->
     <div class="text-center mb-12">
@@ -11,35 +11,33 @@
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="relative">
             <!-- Certificate Carousel Container -->
-            <div class="relative overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-500">
-                <div id="certificate-carousel" class="flex transition-transform duration-500 ease-in-out">
-                    <!-- Certificate 1 -->
-                    <div class="w-full flex-shrink-0">
-                        <img src="{{ asset('image 12.png') }}" 
-                             alt="বিএসটিআই সার্টিফিকেট ১" 
-                             class="w-full h-auto object-contain max-h-96 mx-auto drop-shadow-2xl">
-                    </div>
-                    <!-- Certificate 2 -->
-                    <div class="w-full flex-shrink-0">
-                        <img src="{{ asset('image 13.png') }}" 
-                             alt="বিএসটিআই সার্টিফিকেট ২" 
-                             class="w-full h-auto object-contain max-h-96 mx-auto drop-shadow-2xl">
-                    </div>
-                    <!-- Certificate 3 -->
-                    <div class="w-full flex-shrink-0">
-                        <img src="{{ asset('image 14.png') }}" 
-                             alt="বিএসটিআই সার্টিফিকেট ৩" 
-                             class="w-full h-auto object-contain max-h-96 mx-auto drop-shadow-2xl">
-                    </div>
+            <div class="relative transform rotate-1 hover:rotate-0 transition-transform duration-500 h-96 flex items-center justify-center">
+                <!-- Certificate 1 -->
+                <div id="cert-1" class="absolute inset-0 flex items-center justify-center transition-opacity duration-1000 opacity-100">
+                    <img src="{{ asset('image 12.png') }}" 
+                         alt="বিএসটিআই সার্টিফিকেট ১" 
+                         class="max-w-full max-h-full object-contain drop-shadow-2xl">
+                </div>
+                <!-- Certificate 2 -->
+                <div id="cert-2" class="absolute inset-0 flex items-center justify-center transition-opacity duration-1000 opacity-20">
+                    <img src="{{ asset('image 13.png') }}" 
+                         alt="বিএসটিআই সার্টিফিকেট ২" 
+                         class="max-w-full max-h-full object-contain drop-shadow-2xl">
+                </div>
+                <!-- Certificate 3 -->
+                <div id="cert-3" class="absolute inset-0 flex items-center justify-center transition-opacity duration-1000 opacity-20">
+                    <img src="{{ asset('image 14.png') }}" 
+                         alt="বিএসটিআই সার্টিফিকেট ৩" 
+                         class="max-w-full max-h-full object-contain drop-shadow-2xl">
                 </div>
             </div>
         </div>
 
         <!-- Carousel Dots -->
         <div class="flex justify-center mt-8 space-x-3">
-            <button class="carousel-dot w-3 h-3 rounded-full transition-all duration-300 bg-yellow-400" data-slide="0"></button>
-            <button class="carousel-dot w-3 h-3 rounded-full transition-all duration-300 bg-white bg-opacity-60" data-slide="1"></button>
-            <button class="carousel-dot w-3 h-3 rounded-full transition-all duration-300 bg-white bg-opacity-60" data-slide="2"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full transition-all duration-300 bg-white" data-cert="0"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full transition-all duration-300 bg-white bg-opacity-60" data-cert="1"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full transition-all duration-300 bg-white bg-opacity-60" data-cert="2"></button>
         </div>
 
         <!-- Call-to-Action Button -->
@@ -55,24 +53,37 @@
     <!-- JavaScript for Carousel -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const carousel = document.getElementById('certificate-carousel');
+            const certificates = [
+                document.getElementById('cert-1'),
+                document.getElementById('cert-2'),
+                document.getElementById('cert-3')
+            ];
             const dots = document.querySelectorAll('.carousel-dot');
-            let currentSlide = 0;
-            const totalSlides = 3;
+            let currentCert = 0;
+            const totalCerts = 3;
 
-            // Function to go to specific slide
-            function goToSlide(slideIndex) {
-                currentSlide = slideIndex;
-                const translateX = -slideIndex * 100;
-                carousel.style.transform = `translateX(${translateX}%)`;
+            // Function to show specific certificate
+            function showCertificate(certIndex) {
+                currentCert = certIndex;
+                
+                // Update certificate opacity
+                certificates.forEach((cert, index) => {
+                    if (index === certIndex) {
+                        cert.classList.remove('opacity-20');
+                        cert.classList.add('opacity-100');
+                    } else {
+                        cert.classList.remove('opacity-100');
+                        cert.classList.add('opacity-20');
+                    }
+                });
                 
                 // Update dots
                 dots.forEach((dot, index) => {
-                    if (index === slideIndex) {
-                        dot.classList.remove('bg-white', 'bg-opacity-60');
-                        dot.classList.add('bg-yellow-400');
+                    if (index === certIndex) {
+                        dot.classList.remove('bg-opacity-60');
+                        dot.classList.add('bg-white');
                     } else {
-                        dot.classList.remove('bg-yellow-400');
+                        dot.classList.remove('bg-white');
                         dot.classList.add('bg-white', 'bg-opacity-60');
                     }
                 });
@@ -81,15 +92,15 @@
             // Add click event listeners to dots
             dots.forEach((dot, index) => {
                 dot.addEventListener('click', () => {
-                    goToSlide(index);
+                    showCertificate(index);
                 });
             });
 
-            // Auto-play carousel (optional)
+            // Auto-play carousel - move to next certificate every 4 seconds
             setInterval(() => {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                goToSlide(currentSlide);
-            }, 5000);
+                currentCert = (currentCert + 1) % totalCerts;
+                showCertificate(currentCert);
+            }, 4000);
         });
     </script>
 </section>
