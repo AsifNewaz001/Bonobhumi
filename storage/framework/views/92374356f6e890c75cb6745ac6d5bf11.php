@@ -34,7 +34,7 @@
     <?php echo \Livewire\Mechanisms\FrontendAssets\FrontendAssets::styles(); ?>
 
 </head>
-<body class="font-english antialiased bg-gray-50">
+<body class="font-english antialiased bg-white">
 
     <!-- Main Content -->
     <main>
@@ -47,11 +47,17 @@
         <!-- Comparison Section -->
         <?php echo $__env->make('components.comparison-section', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
         
-        <!-- Combined Checkout Section -->
-        <?php echo $__env->make('components.checkout-section', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+        <!-- Certificate Section -->
+        <?php echo $__env->make('components.certificate-section', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+        
+        <!-- Ata Section -->
+        <?php echo $__env->make('components.ata-section', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+        
+        <!-- Review Section -->
+        <?php echo $__env->make('components.review-section', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
         
         <!-- FAQ Section -->
-        <section class="py-16 bg-cover bg-center bg-no-repeat relative" style="background-image: url('<?php echo e(asset('bgFAQ.png')); ?>');">
+        <section class="py-16 bg-cover bg-center bg-no-repeat relative" style="background-image: url('<?php echo e(asset('faq2.png')); ?>');">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center lg:justify-end">
                 <div class="max-w-4xl lg:mr-8">
                 <div class="text-center mb-12">
@@ -77,6 +83,12 @@ if (isset($__slots)) unset($__slots);
                 </div>
             </div>
         </section>
+        
+        <!-- Pricing Section -->
+        <?php echo $__env->make('components.pricing-section', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+        
+        <!-- Combined Checkout Section -->
+        <?php echo $__env->make('components.checkout-section', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
     </main>
 
     <!-- Footer -->

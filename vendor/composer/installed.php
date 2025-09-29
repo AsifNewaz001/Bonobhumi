@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'bonobhumi/landing',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'b1827a8d6916408ef8ab0df0a21daae94d9ee747',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'bonobhumi/landing' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'b1827a8d6916408ef8ab0df0a21daae94d9ee747',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

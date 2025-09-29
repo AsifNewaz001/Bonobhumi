@@ -6,7 +6,8 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Livewire\\ContactForm' => $baseDir . '/app/Livewire/ContactForm.php',
+    'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\OrderController' => $baseDir . '/app/Http/Controllers/OrderController.php',
     'App\\Livewire\\FAQ' => $baseDir . '/app/Livewire/FAQ.php',
     'App\\Livewire\\TestimonialCarousel' => $baseDir . '/app/Livewire/TestimonialCarousel.php',
     'App\\Order' => $baseDir . '/app/Order.php',

@@ -42,7 +42,7 @@
             <div class="relative mb-12">
                 <div class="relative z-10 flex justify-center">
                     <img 
-                        src="<?php echo e(asset('assets/hero.png')); ?>" 
+                        src="<?php echo e(asset('hero2.png')); ?>" 
                         alt="বনভূমি A2 সরের ঘি - ঐতিহ্যবাহী স্বাদ"
                         class="w-full max-w-lg lg:max-w-3xl mx-auto drop-shadow-2xl rounded-2xl"
                         loading="eager"

@@ -512,7 +512,8 @@ class ComposerStaticInitd0a45360822c1dde4a8c9d7b62445dbd
     );
 
     public static $classMap = array (
-        'App\\Livewire\\ContactForm' => __DIR__ . '/../..' . '/app/Livewire/ContactForm.php',
+        'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrderController.php',
         'App\\Livewire\\FAQ' => __DIR__ . '/../..' . '/app/Livewire/FAQ.php',
         'App\\Livewire\\TestimonialCarousel' => __DIR__ . '/../..' . '/app/Livewire/TestimonialCarousel.php',
         'App\\Order' => __DIR__ . '/../..' . '/app/Order.php',
