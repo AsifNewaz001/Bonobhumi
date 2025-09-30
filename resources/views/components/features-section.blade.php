@@ -4,39 +4,60 @@
     <style>
         @media (max-width: 768px) {
             #features {
-                background-image: url('{{ asset('M2ndSection.png') }}') !important;
-                background-size: cover !important;
-                background-position: center center !important;
-                min-height: 100vh;
+                background-image: url('{{ asset('2ndMVBackground.png') }}') !important;
+                background-size: 100% 100% !important;
+                background-position: top center !important;
+                background-repeat: no-repeat !important;
+                min-height: auto !important;
+                padding-bottom: 0 !important;
             }
         }
+
+        /* CTA Button Styling */
+        .cta-button {
+            font-family: 'Nirmala UI', 'Segoe UI', sans-serif;
+            background: linear-gradient(180deg, #059845 0%, #018038 100%);
+            border-radius: 9999px; /* Capsule shape */
+            box-shadow: 0 0 0 3px #DEE6E2, 0 4.52px 4.52px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 0 3px #DEE6E2, 0 6px 8px rgba(0, 0, 0, 0.3);
+        }
     </style>
-    
+
     <!-- Optional overlay for better text readability -->
     <div class="absolute inset-0 bg-white bg-opacity-10"></div>
-    
+
     <!-- Mobile Layout - Improved Responsive Design -->
-    <div class="lg:hidden relative z-10 min-h-screen flex items-start pt-32">
+    <div class="lg:hidden relative z-10 flex flex-col items-center pt-32 pb-0">
         <div class="w-full px-4 sm:px-6">
             <!-- Text Content - Mobile Optimized -->
-            <div class="text-center space-y-6">
+            <div class="text-center space-y-6 mb-12">
                 <p class="text-center" style="font-family: 'Hind Siliguri', sans-serif; font-weight: 600; font-size: clamp(24px, 6vw, 30px); color: #614e21; line-height: 1.2;">
                     ঐতিহ্যের সেই স্বাদ পেতে সংগ্রহ করুন
                 </p>
                 <h2 class="text-center" style="font-family: 'Hind Siliguri', sans-serif; font-weight: 600; font-size: clamp(36px, 10vw, 48px); color: #614e21; line-height: 1.1;">
                     বনভূমি A2 সরের ঘি
                 </h2>
-                
+
                 <!-- CTA Button -->
                 <div class="pt-4">
-                    <button onclick="document.getElementById('order-form').scrollIntoView({behavior: 'smooth'})" class="px-10 py-5 rounded-lg text-white font-bold transition-all duration-300 hover:shadow-lg transform hover:scale-105 bg-emerald-600 hover:bg-emerald-700" 
-                       style="font-family: 'Hind Siliguri', sans-serif; font-size: clamp(18px, 5vw, 22px);">
+                    <button onclick="document.getElementById('order-form').scrollIntoView({behavior: 'smooth'})" class="cta-button px-10 py-5 text-white font-bold"
+                       style="font-size: clamp(18px, 5vw, 22px);">
                         এখনই অর্ডার করুন
                     </button>
                 </div>
             </div>
+
+            <!-- Product Image - Foreground -->
+            <div class="flex justify-center pb-8">
+                <img src="{{ asset('mVSecondSection.png') }}" alt="বনভূমি A2 সরের ঘি" class="w-full max-w-md" style="max-width: 452.96px;">
+            </div>
         </div>
-        
+
     </div>
 
     <div class="hidden lg:block relative w-full h-screen overflow-hidden z-10">
@@ -51,8 +72,7 @@
                     বনভূমি A2 সরের ঘি
                 </h2>
                 
-                <button onclick="document.getElementById('order-form').scrollIntoView({behavior: 'smooth'})" class="px-12 py-6 rounded-lg text-white font-bold text-2xl transition-all duration-300 hover:shadow-lg transform hover:scale-105 bg-emerald-600 hover:bg-emerald-700" 
-                   style="font-family: 'Hind Siliguri', sans-serif;">
+                <button onclick="document.getElementById('order-form').scrollIntoView({behavior: 'smooth'})" class="cta-button px-12 py-6 text-white font-bold text-2xl">
                     এখনই অর্ডার করুন
                 </button>
             </div>

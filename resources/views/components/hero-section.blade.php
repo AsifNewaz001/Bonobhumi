@@ -4,7 +4,64 @@
         @media (max-width: 768px) {
             section {
                 background-size: 320% auto !important;
-                background-position: top center !important;
+                background-position: top left !important;
+            }
+        }
+
+        /* Hero headline with prominent stroke and shadow */
+        .hero-headline {
+            font-family: 'Hind Siliguri', sans-serif;
+            font-weight: 700;
+            color: #604D20;
+            line-height: 1.3;
+            text-align: center;
+
+            /* Multi-layer stroke and shadow */
+            text-shadow:
+                /* 8-direction stroke for smooth outline - 4px */
+                -4px -4px 0 #FFE6A9,
+                0 -4px 0 #FFE6A9,
+                4px -4px 0 #FFE6A9,
+                -4px 0 0 #FFE6A9,
+                4px 0 0 #FFE6A9,
+                -4px 4px 0 #FFE6A9,
+                0 4px 0 #FFE6A9,
+                4px 4px 0 #FFE6A9,
+
+                /* Additional diagonal points for smoother stroke */
+                -3px -3px 0 #FFE6A9,
+                3px -3px 0 #FFE6A9,
+                -3px 3px 0 #FFE6A9,
+                3px 3px 0 #FFE6A9,
+                -2px -2px 0 #FFE6A9,
+                2px -2px 0 #FFE6A9,
+                -2px 2px 0 #FFE6A9,
+                2px 2px 0 #FFE6A9,
+
+                /* Drop shadow - MUST be last - increased */
+                0 9px 8px rgba(0, 0, 0, 0.45);
+        }
+
+        /* Mobile-specific stroke scaling */
+        @media (max-width: 768px) {
+            .hero-headline {
+                text-shadow:
+                    /* Stroke at 3px for mobile */
+                    -3px -3px 0 #FFE6A9,
+                    0 -3px 0 #FFE6A9,
+                    3px -3px 0 #FFE6A9,
+                    -3px 0 0 #FFE6A9,
+                    3px 0 0 #FFE6A9,
+                    -3px 3px 0 #FFE6A9,
+                    0 3px 0 #FFE6A9,
+                    3px 3px 0 #FFE6A9,
+                    /* Additional fills */
+                    -2px -2px 0 #FFE6A9,
+                    2px -2px 0 #FFE6A9,
+                    -2px 2px 0 #FFE6A9,
+                    2px 2px 0 #FFE6A9,
+                    /* Drop shadow - increased */
+                    0 7px 6px rgba(0, 0, 0, 0.45);
             }
         }
     </style>
@@ -18,13 +75,13 @@
     
     <!-- Logo on Top -->
     <div class="absolute top-6 left-1/2 transform -translate-x-1/2 z-50 p-4">
-        <img src="{{ asset('assets/Bonobhumi-Logo Bangla 1.png') }}" alt="বনভূমি লোগো" class="h-16 sm:h-20 lg:h-24 w-auto">
+        <img src="{{ asset('updateLogo.png') }}" alt="বনভূমি লোগো" class="h-16 sm:h-20 lg:h-24 w-auto">
     </div>
     
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 pt-28 sm:pt-32 lg:pt-36">
         <div class="text-center">
             <!-- Main Headline -->
-            <h1 class="mb-12" style="font-family: 'Hind Siliguri', sans-serif; font-weight: bold; color: #614e21; line-height: 1.2;">
+            <h1 class="mb-12 hero-headline">
                 <!-- Desktop: 2 sentences -->
                 <span class="hidden md:block" style="font-size: 60px;">
                     <span>এমন স্বাদের সরের ঘি শেষ কবে খেয়েছেন</span><br>
