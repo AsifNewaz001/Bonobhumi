@@ -1,10 +1,10 @@
-<section class="relative overflow-hidden" style="background-image: url('{{ asset('assets/header 1.png') }}'); background-size: 100% auto; background-position: top center; background-repeat: no-repeat;">
+<section class="relative overflow-hidden" style="background-image: url('{{ asset('assets/header 1.png') }}'); background-size: cover; background-position: center 30%; background-repeat: no-repeat;">
     <!-- Mobile-specific background styling -->
     <style>
         @media (max-width: 768px) {
             section {
-                background-size: 320% auto !important;
-                background-position: top left !important;
+                background-size: 350% auto !important;
+                background-position: center top !important;
             }
         }
 
@@ -16,9 +16,8 @@
             line-height: 1.3;
             text-align: center;
 
-            /* Multi-layer stroke and shadow */
+            /* Subtle outline with gentle drop shadow */
             text-shadow:
-                /* 8-direction stroke for smooth outline - 4px */
                 -4px -4px 0 #FFE6A9,
                 0 -4px 0 #FFE6A9,
                 4px -4px 0 #FFE6A9,
@@ -27,26 +26,13 @@
                 -4px 4px 0 #FFE6A9,
                 0 4px 0 #FFE6A9,
                 4px 4px 0 #FFE6A9,
-
-                /* Additional diagonal points for smoother stroke */
-                -3px -3px 0 #FFE6A9,
-                3px -3px 0 #FFE6A9,
-                -3px 3px 0 #FFE6A9,
-                3px 3px 0 #FFE6A9,
-                -2px -2px 0 #FFE6A9,
-                2px -2px 0 #FFE6A9,
-                -2px 2px 0 #FFE6A9,
-                2px 2px 0 #FFE6A9,
-
-                /* Drop shadow - MUST be last - increased */
-                0 9px 8px rgba(0, 0, 0, 0.45);
+                0 10px 12px rgba(0, 0, 0, 0.35);
         }
 
         /* Mobile-specific stroke scaling */
         @media (max-width: 768px) {
             .hero-headline {
                 text-shadow:
-                    /* Stroke at 3px for mobile */
                     -3px -3px 0 #FFE6A9,
                     0 -3px 0 #FFE6A9,
                     3px -3px 0 #FFE6A9,
@@ -55,18 +41,12 @@
                     -3px 3px 0 #FFE6A9,
                     0 3px 0 #FFE6A9,
                     3px 3px 0 #FFE6A9,
-                    /* Additional fills */
-                    -2px -2px 0 #FFE6A9,
-                    2px -2px 0 #FFE6A9,
-                    -2px 2px 0 #FFE6A9,
-                    2px 2px 0 #FFE6A9,
-                    /* Drop shadow - increased */
-                    0 7px 6px rgba(0, 0, 0, 0.45);
+                    0 8px 6px rgba(0, 0, 0, 0.35);
             }
         }
     </style>
-    <!-- White overlay to ensure text readability -->
-    <div class="absolute inset-0" style="background-color: #ffffff; opacity: 0.3;"></div>
+    <!-- Subtle gradient overlay to ensure text readability -->
+    <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(217, 217, 217, 0.1) 50%, rgba(255, 255, 255, 0.2) 100%);"></div>
     
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-5">
@@ -88,7 +68,7 @@
                     <span>মনে পড়ে কি?</span>
                 </span>
                 <!-- Mobile: 3 sentences with responsive font size -->
-                <span class="block md:hidden text-3xl sm:text-4xl">
+                <span class="block md:hidden" style="font-family: 'Hind Siliguri', sans-serif; font-weight: 700; font-size: 37px; line-height: 1.25;">
                     <span>এমন স্বাদের সরের ঘি</span><br>
                     শেষ কবে খেয়েছেন<br>
                     <span>মনে পড়ে কি?</span>

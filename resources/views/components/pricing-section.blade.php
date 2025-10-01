@@ -14,10 +14,11 @@
         </div>
 
         <!-- Pricing Cards Container -->
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="mx-auto max-w-[404px] md:max-w-5xl">
+            <div class="pricing-grid grid gap-8 md:grid-cols-2">
             
             <!-- Regular Pack Card -->
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                <div class="bg-white rounded-[24px] border border-gray-200 shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300" style="width: 424px; height: 540px;">
                 <!-- Card Header -->
                 <div class="bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-8">
                     <div class="flex items-center space-x-4">
@@ -41,7 +42,7 @@
                     <p class="text-gray-600 text-lg mb-2" style="font-family: 'Hind Siliguri', sans-serif;">
                         প্যাকেজ মূল্য
                     </p>
-                    <p class="text-2xl font-bold text-gray-500 line-through" style="font-family: 'Hind Siliguri', sans-serif; text-decoration-color: #FF0000;">
+                    <p class="text-2xl font-semibold text-[#9D9D9D] line-through" style="font-family: 'Hind Siliguri', sans-serif; text-decoration-color: #FF0000;">
                         ৮৯০ টাকা
                     </p>
                 </div>
@@ -69,13 +70,24 @@
             </div>
 
             <!-- Family Pack Card -->
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 relative" style="border: 4px solid #FACC15;">
+            <div class="bg-white rounded-[24px] shadow-lg transform hover:scale-105 transition-transform duration-300 relative" style="border: 3px solid #FACC15; overflow: visible; width: 424px; height: 540px;">
 
-                <!-- Best Value Ribbon -->
-                <div class="absolute best-value-ribbon z-10" style="top: 16px; right: 8px;">
-                    <div class="bg-yellow-400 text-black px-4 py-2 rounded-lg font-bold shadow-lg" style="font-family: 'Hind Siliguri', sans-serif; font-size: 16px;">
-                        Best Value!
-                    </div>
+                <!-- Best Value Badge -->
+                <div class="absolute" style="top: -25px; right: -10px; z-index: 20;">
+                    <span style="
+                        display: inline-flex;
+                        align-items: center;
+                        background: #FACC15;
+                        color: #1F2937;
+                        font-family: 'Hind Siliguri', sans-serif;
+                        font-size: 11px;
+                        font-weight: 700;
+                        line-height: 1.428em;
+                        padding: 8px 12px;
+                        border-radius: 9999px;
+                        border: 1px solid #E5E7EB;
+                        box-shadow: 0px 1.86px 14.91px 0px rgba(0, 0, 0, 0.07);
+                    ">Best Value!</span>
                 </div>
 
                 <!-- Card Header -->
@@ -101,7 +113,7 @@
                     <p class="text-gray-600 text-lg mb-2" style="font-family: 'Hind Siliguri', sans-serif;">
                         প্যাকেজ মূল্য
                     </p>
-                    <p class="text-2xl font-bold text-gray-500 line-through" style="font-family: 'Hind Siliguri', sans-serif; text-decoration-color: #FF0000;">
+                    <p class="text-2xl font-semibold text-[#9D9D9D] line-through" style="font-family: 'Hind Siliguri', sans-serif; text-decoration-color: #FF0000;">
                         ১৭৮০ টাকা
                     </p>
                 </div>
@@ -127,6 +139,7 @@
                     </button>
                 </div>
             </div>
+            </div>
         </div>
     </div>
 
@@ -138,12 +151,12 @@
                 font-weight: bold !important;
             }
 
-            .grid {
+            .pricing-grid {
                 grid-template-columns: 1fr !important;
                 gap: 1.5rem !important;
             }
 
-            .grid > div {
+            .pricing-grid > div {
                 width: 330px !important;
                 height: auto !important;
                 min-height: 420.28px !important;
@@ -153,47 +166,47 @@
             }
 
             /* Card header - BOTH CARDS */
-            .grid > div > div:first-of-type {
+            .pricing-grid > div > div:first-of-type {
                 padding: 1.25rem 1rem !important;
             }
 
-            .grid > div > div:first-of-type .flex {
+            .pricing-grid > div > div:first-of-type .flex {
                 gap: 0.75rem !important;
             }
 
             /* Regular Pack (first card) - larger image */
-            .grid > div:first-child > div:first-of-type .w-24 {
+            .pricing-grid > div:first-child > div:first-of-type .w-24 {
                 width: 72px !important;
                 height: 72px !important;
             }
 
-            .grid > div:first-child > div:first-of-type img {
+            .pricing-grid > div:first-child > div:first-of-type img {
                 width: 52px !important;
                 height: 52px !important;
             }
 
             /* Family Pack (second card) */
-            .grid > div:last-child > div:first-of-type .w-24 {
+            .pricing-grid > div:last-child > div:first-of-type .w-24 {
                 width: 64px !important;
                 height: 64px !important;
             }
 
-            .grid > div:last-child > div:first-of-type img {
+            .pricing-grid > div:last-child > div:first-of-type img {
                 width: 42px !important;
                 height: 42px !important;
             }
 
-            .grid > div h3 {
+            .pricing-grid > div h3 {
                 font-size: 22px !important;
                 line-height: 1.3 !important;
             }
 
             /* Package price section - BOTH CARDS (2nd div) */
-            .grid > div > div:nth-of-type(2) {
+            .pricing-grid > div > div:nth-of-type(2) {
                 padding: 1rem 1rem !important;
             }
 
-            .grid > div > div:nth-of-type(2) p {
+            .pricing-grid > div > div:nth-of-type(2) p {
                 margin-bottom: 0.5rem !important;
             }
 
@@ -235,16 +248,7 @@
                 font-size: 18px !important;
             }
 
-            /* Best value ribbon */
-            .best-value-ribbon {
-                top: 12px !important;
-                right: 8px !important;
-            }
-
-            .best-value-ribbon > div {
-                font-size: 13px !important;
-                padding: 0.375rem 0.875rem !important;
-            }
+            /* Best value badge stays outside box on mobile too */
         }
     </style>
 </section>
