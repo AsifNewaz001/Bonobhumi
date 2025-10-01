@@ -2,30 +2,223 @@
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono:wght@400&display=swap" rel="stylesheet">
 
 <style>
-/* Flipping animation styles */
+.product-selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+@media (max-width: 767px) {
+    .product-selection {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* Split-flap clock animation */
+.digit-container {
+    position: relative;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
 .digit-flip {
-    transform-style: preserve-3d;
     position: relative;
 }
 
 .digit-flip.flipping {
-    animation: flipUp 0.6s ease-in-out;
+    animation: flipNumber 0.4s ease-in-out;
 }
 
-@keyframes flipUp {
+.product-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    padding: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card--selected {
+    border: 2px solid #1ABC54;
+    box-shadow: 0 4px 10px rgba(26, 188, 84, 0.15);
+}
+
+.product-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.product-radio {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 9999px;
+    border: 2px solid #BDBDBD;
+    background: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.product-radio:checked {
+    background-color: #1ABC54;
+    border-color: #1ABC54;
+}
+
+.product-radio:focus-visible {
+    outline: 2px solid rgba(26, 188, 84, 0.35);
+    outline-offset: 2px;
+}
+
+.product-image {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: #F5F6F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.product-image img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.product-name {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+}
+
+.product-weight {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666;
+    margin: 0;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    background: #FF4D4F;
+    color: #FFFFFF;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 12px;
+}
+
+.product-footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.price-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+.old-price {
+    font-size: 14px;
+    color: #888888;
+    text-decoration: line-through;
+    text-decoration-color: #888888;
+    text-decoration-thickness: 1.5px;
+    line-height: 1.3;
+}
+
+.new-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.3;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+.quantity-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 9999px;
+    border: none;
+    background: #F1F1F1;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.quantity-button:hover {
+    background: #E4E4E4;
+    transform: translateY(-1px);
+}
+
+.quantity-button:focus-visible {
+    outline: 2px solid rgba(26, 188, 84, 0.3);
+    outline-offset: 2px;
+}
+
+.quantity-value {
+    min-width: 36px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #111111;
+}
+
+@keyframes flipNumber {
     0% {
-        transform: rotateX(0deg);
+        transform: perspective(200px) rotateX(0deg);
     }
     50% {
-        transform: rotateX(-90deg);
+        transform: perspective(200px) rotateX(90deg);
+        opacity: 0.3;
     }
     100% {
-        transform: rotateX(0deg);
+        transform: perspective(200px) rotateX(0deg);
     }
-}
-
-.digit-container {
-    perspective: 1000px;
 }
 </style>
 
@@ -119,7 +312,7 @@
             
             <!-- CTA Button -->
             <div class="text-center">
-                <button onclick="document.getElementById('order-form').scrollIntoView({behavior: 'smooth'})" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg px-8 py-4 shadow-md transition duration-300 hover:scale-105 hover:shadow-lg text-lg" style="font-family: 'Hind Siliguri', sans-serif;">
+                <button onclick="document.getElementById('order-form').scrollIntoView({behavior: 'smooth'})" class="cta-button px-12 py-5 text-white font-bold rounded-lg transition duration-300 hover:scale-105 hover:shadow-lg" style="font-family: 'Hind Siliguri', sans-serif; font-size: clamp(18px, 4vw, 24px);">
                     এখনই অর্ডার করুন
                 </button>
             </div>
@@ -157,79 +350,56 @@
 
         <!-- Product Selection Section -->
         <div class="max-w-5xl mx-auto mb-12">
-            <div class="mx-auto max-w-[404px] rounded-[24px] border border-gray-200 bg-white px-6 py-8 shadow-lg sm:px-8" style="background-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.96) 100%);">
+            <div class="mx-auto max-w-[404px] md:max-w-4xl rounded-[24px] border border-gray-200 bg-white px-4 py-8 shadow-lg sm:px-8" style="background-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.96) 100%);">
                 <h3 class="mb-6 text-center text-lg font-semibold text-gray-800" style="font-family: 'Hind Siliguri', sans-serif;">Your Products</h3>
-                <div class="space-y-6 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
+                <div class="product-selection">
                     <!-- Regular Pack Card -->
-                    <div class="relative rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-all"
-                         :class="selectedProduct === 'regular' ? 'border-[#55B76B] ring-2 ring-[#55B76B]/40' : ''">
-                        <div class="flex items-start gap-4">
-                            <input type="radio" name="product" value="regular" class="mt-1.5 h-5 w-5 text-green-600" x-model="selectedProduct" @change="updateProduct()">
-                            <div class="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-gray-50">
-                                <img src="{{ asset('singleGhee.png') }}" alt="রেগুলার প্যাক" class="h-16 w-16 object-contain">
+                    <div class="product-card" :class="{'product-card--selected': selectedProduct === 'regular'}">
+                        <div class="product-header">
+                            <input type="radio" name="product" value="regular" class="product-radio" x-model="selectedProduct" @change="updateProduct()">
+                            <div class="product-image">
+                                <img src="{{ asset('singleGhee.png') }}" alt="রেগুলার প্যাক">
                             </div>
-                            <div class="flex-1">
-                                <h4 class="text-[18px] font-semibold text-gray-900" style="font-family: 'Hind Siliguri', sans-serif;">রেগুলার প্যাক ৩০০ গ্রাম</h4>
-                                <div class="mt-2 flex items-center gap-2" style="font-family: 'Hind Siliguri', sans-serif;">
-                                    <span class="text-sm text-[#9D9D9D] line-through">৳৮৯০</span>
-                                    <span class="text-lg font-semibold text-gray-900">৳৬৯০</span>
-                                </div>
+                            <div class="product-info">
+                                <h4 class="product-name">রেগুলার প্যাক</h4>
+                                <p class="product-weight">৩০০ গ্রাম</p>
                             </div>
                         </div>
-                        <div class="mt-4 flex items-center justify-between border-t border-gray-100 pt-3">
-                            <span class="text-sm font-medium text-gray-600" style="font-family: 'Hind Siliguri', sans-serif;">পরিমাণ</span>
-                            <div class="flex items-center gap-2">
-                                <button type="button" class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 text-base font-semibold text-gray-600 transition hover:bg-gray-200"
-                                        @click="decreaseQuantity('regular')">-</button>
-                                <span class="min-w-[42px] text-center text-lg font-semibold text-gray-900" style="font-family: 'Hind Siliguri', sans-serif;"
-                                      x-text="toBengaliDigits(quantities.regular)">০</span>
-                                <button type="button" class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 text-base font-semibold text-gray-600 transition hover:bg-gray-200"
-                                        @click="increaseQuantity('regular')">+</button>
+                        <div class="product-footer">
+                            <div class="price-stack">
+                                <span class="old-price">৳৮৯০</span>
+                                <span class="new-price">৳৬৯০</span>
+                            </div>
+                            <div class="quantity-control">
+                                <button type="button" class="quantity-button" @click="decreaseQuantity('regular')">-</button>
+                                <span class="quantity-value" x-text="toBengaliDigits(quantities.regular)">০</span>
+                                <button type="button" class="quantity-button" @click="increaseQuantity('regular')">+</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Family Pack Card -->
-                    <div class="relative rounded-2xl bg-white p-5 shadow-sm transition-all" style="overflow: visible;"
-                         :style="selectedProduct === 'family' ? 'border: 3px solid #FACC15;' : 'border: 1px solid #E5E7EB;'">
-                        <div class="absolute" style="top: -12px; right: 25px; transform: rotate(12deg); z-index: 10;">
-                            <span style="
-                                display: inline-flex;
-                                align-items: center;
-                                background: #FACC15;
-                                color: #1F2937;
-                                font-family: 'Hind Siliguri', sans-serif;
-                                font-size: 11px;
-                                font-weight: 700;
-                                line-height: 1.428em;
-                                padding: 8px 12px;
-                                border-radius: 9999px;
-                                border: 1px solid #E5E7EB;
-                                box-shadow: 0px 1.86px 14.91px 0px rgba(0, 0, 0, 0.07);
-                            ">Best Value!</span>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <input type="radio" name="product" value="family" class="mt-1.5 h-5 w-5 text-green-600" x-model="selectedProduct" @change="updateProduct()">
-                            <div class="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-gray-50">
-                                <img src="{{ asset('Gheepack.png') }}" alt="ফ্যামিলি প্যাক" class="h-16 w-16 object-contain">
+                    <div class="product-card" :class="{'product-card--selected': selectedProduct === 'family'}">
+                        <div class="discount-badge">৪৯০ টাকা ছাড়!!</div>
+                        <div class="product-header">
+                            <input type="radio" name="product" value="family" class="product-radio" x-model="selectedProduct" @change="updateProduct()">
+                            <div class="product-image">
+                                <img src="{{ asset('Gheepack.png') }}" alt="ফ্যামিলি প্যাক">
                             </div>
-                            <div class="flex-1">
-                                <h4 class="text-[18px] font-semibold text-gray-900" style="font-family: 'Hind Siliguri', sans-serif;">ফ্যামিলি প্যাক ৩০০ গ্রাম × ২</h4>
-                                <div class="mt-2 flex items-center gap-2" style="font-family: 'Hind Siliguri', sans-serif;">
-                                    <span class="text-sm text-[#9D9D9D] line-through">৳১৭৮০</span>
-                                    <span class="text-lg font-semibold text-gray-900">৳১২৯০</span>
-                                </div>
+                            <div class="product-info">
+                                <h4 class="product-name">ফ্যামিলি প্যাক</h4>
+                                <p class="product-weight">৩০০ গ্রাম × ২</p>
                             </div>
                         </div>
-                        <div class="mt-4 flex items-center justify-between border-t border-gray-100 pt-3">
-                            <span class="text-sm font-medium text-gray-600" style="font-family: 'Hind Siliguri', sans-serif;">পরিমাণ</span>
-                            <div class="flex items-center gap-2">
-                                <button type="button" class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 text-base font-semibold text-gray-600 transition hover:bg-gray-200"
-                                        @click="decreaseQuantity('family')">-</button>
-                                <span class="min-w-[42px] text-center text-lg font-semibold text-gray-900" style="font-family: 'Hind Siliguri', sans-serif;"
-                                      x-text="toBengaliDigits(quantities.family)">১</span>
-                                <button type="button" class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 text-base font-semibold text-gray-600 transition hover:bg-gray-200"
-                                        @click="increaseQuantity('family')">+</button>
+                        <div class="product-footer">
+                            <div class="price-stack">
+                                <span class="old-price">৳১৭৮০</span>
+                                <span class="new-price">৳১২৯০</span>
+                            </div>
+                            <div class="quantity-control">
+                                <button type="button" class="quantity-button" @click="decreaseQuantity('family')">-</button>
+                                <span class="quantity-value" x-text="toBengaliDigits(quantities.family)">১</span>
+                                <button type="button" class="quantity-button" @click="increaseQuantity('family')">+</button>
                             </div>
                         </div>
                     </div>
