@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- SEO Meta Tags -->
     <title>বনভূমি A2 সরের ঘি | খাঁটি দেশি গরুর ক্রিম থেকে তৈরি | Bonobhumi Pure Desi Ghee</title>
     <meta name="description" content="বনভূমি A2 সরের ঘি - ১০০% খাঁটি দেশি গরুর ক্রিম থেকে ঐতিহ্যবাহী বিলোনা পদ্ধতিতে তৈরি। সহজ হজম, ভিটামিন সমৃদ্ধ, শিশুদের মস্তিষ্ক বিকাশে সহায়ক।">

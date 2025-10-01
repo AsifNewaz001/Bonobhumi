@@ -413,87 +413,88 @@
             <!-- Left Column - Customer Information Form -->
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <h3 class="text-xl font-bold text-gray-900 mb-6" style="font-family: 'Hind Siliguri', sans-serif;">Customer Information</h3>
-                
-                <form>
-                    <div class="space-y-4">
-                        <!-- Name Field -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2" style="font-family: 'Hind Siliguri', sans-serif;">
-                                সম্পূর্ণ নাম <span class="text-red-500">*</span>
-                            </label>
-                            <input type="text" 
-                                   placeholder="সম্পূর্ণ নাম লিখুন" 
-                                   class="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" 
-                                   style="font-family: 'Hind Siliguri', sans-serif;">
-                        </div>
-                        
-                        <!-- Phone Field -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2" style="font-family: 'Hind Siliguri', sans-serif;">
-                                মোবাইল নাম্বার <span class="text-red-500">*</span>
-                            </label>
-                            <input type="tel" 
-                                   placeholder="সঠিক ১১ ডিজিটের মোবাইল নাম্বার" 
-                                   class="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" 
-                                   style="font-family: 'Hind Siliguri', sans-serif;">
-                        </div>
-                        
-                        <!-- Address Field -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2" style="font-family: 'Hind Siliguri', sans-serif;">
-                                ঠিকানা <span class="text-red-500">*</span>
-                            </label>
-                            <textarea rows="3" 
-                                      placeholder="বাড়ি/এপার্টমেন্ট, রোড নং, উপজেলা, জেলা" 
-                                      class="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none" 
-                                      style="font-family: 'Hind Siliguri', sans-serif;"></textarea>
-                        </div>
-                        
-                        <!-- Delivery Area Selection -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-3" style="font-family: 'Hind Siliguri', sans-serif;">
-                                ডেলিভারি এলাকা
-                            </label>
-                            <div class="space-y-3">
-                                <div class="border rounded-lg p-3 cursor-pointer transition-all" 
-                                     :class="deliveryArea === 'inside' ? 'border-green-500 bg-green-50' : 'border-gray-200'"
-                                     @click="deliveryArea = 'inside'; updateDelivery()">
-                                    <div class="flex items-center">
-                                        <input type="radio" name="delivery" value="inside" class="w-4 h-4 text-green-600" x-model="deliveryArea" @change="updateDelivery()">
-                                        <span class="ml-3 font-medium" style="font-family: 'Hind Siliguri', sans-serif;">ঢাকার মধ্যে (৳১০০)</span>
-                                    </div>
-                                </div>
-                                <div class="border rounded-lg p-3 cursor-pointer transition-all" 
-                                     :class="deliveryArea === 'outside' ? 'border-green-500 bg-green-50' : 'border-gray-200'"
-                                     @click="deliveryArea = 'outside'; updateDelivery()">
-                                    <div class="flex items-center">
-                                        <input type="radio" name="delivery" value="outside" class="w-4 h-4 text-green-600" x-model="deliveryArea" @change="updateDelivery()">
-                                        <span class="ml-3 font-medium" style="font-family: 'Hind Siliguri', sans-serif;">ঢাকার বাইরে (৳১৫০)</span>
-                                    </div>
+
+                <div class="space-y-4">
+                    <!-- Name Field -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2" style="font-family: 'Hind Siliguri', sans-serif;">
+                            সম্পূর্ণ নাম <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text"
+                               x-model="formData.name"
+                               placeholder="সম্পূর্ণ নাম লিখুন"
+                               class="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                               style="font-family: 'Hind Siliguri', sans-serif;">
+                    </div>
+
+                    <!-- Phone Field -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2" style="font-family: 'Hind Siliguri', sans-serif;">
+                            মোবাইল নাম্বার <span class="text-red-500">*</span>
+                        </label>
+                        <input type="tel"
+                               x-model="formData.mobile"
+                               placeholder="সঠিক ১১ ডিজিটের মোবাইল নাম্বার"
+                               class="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                               style="font-family: 'Hind Siliguri', sans-serif;">
+                    </div>
+
+                    <!-- Address Field -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2" style="font-family: 'Hind Siliguri', sans-serif;">
+                            ঠিকানা <span class="text-red-500">*</span>
+                        </label>
+                        <textarea rows="3"
+                                  x-model="formData.address"
+                                  placeholder="বাড়ি/এপার্টমেন্ট, রোড নং, উপজেলা, জেলা"
+                                  class="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
+                                  style="font-family: 'Hind Siliguri', sans-serif;"></textarea>
+                    </div>
+
+                    <!-- Delivery Area Selection -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3" style="font-family: 'Hind Siliguri', sans-serif;">
+                            ডেলিভারি এলাকা
+                        </label>
+                        <div class="space-y-3">
+                            <div class="border rounded-lg p-3 cursor-pointer transition-all"
+                                 :class="deliveryArea === 'inside' ? 'border-green-500 bg-green-50' : 'border-gray-200'"
+                                 @click="deliveryArea = 'inside'; updateDelivery()">
+                                <div class="flex items-center">
+                                    <input type="radio" name="delivery" value="inside" class="w-4 h-4 text-green-600" x-model="deliveryArea" @change="updateDelivery()">
+                                    <span class="ml-3 font-medium" style="font-family: 'Hind Siliguri', sans-serif;">ঢাকার মধ্যে (৳১০০)</span>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <!-- Payment Method -->
-                        <div class="bg-green-50 border border-green-200 rounded-lg p-4">
-                            <div class="flex items-center">
-                                <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
-                                </svg>
-                                <div>
-                                    <p class="font-semibold text-green-800" style="font-family: 'Hind Siliguri', sans-serif;">ক্যাশ অন ডেলিভারি</p>
-                                    <p class="text-sm text-green-600" style="font-family: 'Hind Siliguri', sans-serif;">পণ্য হাতে পেয়ে টাকা পরিশোধ করুন</p>
+                            <div class="border rounded-lg p-3 cursor-pointer transition-all"
+                                 :class="deliveryArea === 'outside' ? 'border-green-500 bg-green-50' : 'border-gray-200'"
+                                 @click="deliveryArea = 'outside'; updateDelivery()">
+                                <div class="flex items-center">
+                                    <input type="radio" name="delivery" value="outside" class="w-4 h-4 text-green-600" x-model="deliveryArea" @change="updateDelivery()">
+                                    <span class="ml-3 font-medium" style="font-family: 'Hind Siliguri', sans-serif;">ঢাকার বাইরে (৳১৫০)</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </form>
+
+                    <!-- Payment Method -->
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-green-800" style="font-family: 'Hind Siliguri', sans-serif;">ক্যাশ অন ডেলিভারি</p>
+                                <p class="text-sm text-green-600" style="font-family: 'Hind Siliguri', sans-serif;">পণ্য হাতে পেয়ে টাকা পরিশোধ করুন</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <!-- Right Column - Order Summary -->
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <h3 class="text-xl font-bold text-gray-900 mb-6" style="font-family: 'Hind Siliguri', sans-serif;">Order Summary</h3>
-                
+
                 <!-- Selected Product Display -->
                 <div class="bg-gray-50 rounded-lg p-4 mb-6" x-show="selectedProduct">
                     <div class="flex items-center space-x-4">
@@ -506,7 +507,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Price Breakdown -->
                 <div class="space-y-3 mb-6">
                     <div class="flex justify-between text-gray-600">
@@ -524,14 +525,37 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Place Order Button -->
-                <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 hover:scale-105 flex items-center justify-center" style="font-family: 'Hind Siliguri', sans-serif;">
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <button @click="submitOrder()" :disabled="isSubmitting" class="w-full bg-green-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 hover:scale-105 flex items-center justify-center" style="font-family: 'Hind Siliguri', sans-serif;">
+                    <svg x-show="!isSubmitting" class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
                     </svg>
-                    PLACE ORDER
+                    <svg x-show="isSubmitting" class="animate-spin h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span x-text="isSubmitting ? 'প্রসেসিং...' : 'PLACE ORDER'"></span>
                 </button>
+
+                <!-- Success/Error Messages -->
+                <div x-show="successMessage" x-transition class="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <p class="text-green-700 text-sm font-medium" style="font-family: 'Hind Siliguri', sans-serif;" x-text="successMessage"></p>
+                    </div>
+                </div>
+
+                <div x-show="errorMessage" x-transition class="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-red-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                        </svg>
+                        <p class="text-red-700 text-sm font-medium" style="font-family: 'Hind Siliguri', sans-serif;" x-text="errorMessage"></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -659,17 +683,27 @@ function orderForm() {
         subtotal: 1290,
         shippingCost: 100,
         total: 1390,
-        
+
+        formData: {
+            name: '',
+            mobile: '',
+            address: ''
+        },
+
+        isSubmitting: false,
+        successMessage: '',
+        errorMessage: '',
+
         productDetails: {
             name: 'ফ্যামিলি প্যাক ৩০০ গ্রাম × ২',
             price: 1290,
             image: '{{ asset("Gheepack.png") }}'
         },
-        
+
         init() {
             this.updateProduct();
         },
-        
+
         updateProduct() {
             if (this.selectedProduct === 'regular') {
                 this.productDetails = {
@@ -690,7 +724,7 @@ function orderForm() {
             }
             this.updateTotals();
         },
-        
+
         increaseQuantity(product) {
             this.quantities[product]++;
             if (product !== this.selectedProduct) {
@@ -700,19 +734,19 @@ function orderForm() {
                 this.updateTotals();
             }
         },
-        
+
         decreaseQuantity(product) {
             if (this.quantities[product] > 0) {
                 this.quantities[product]--;
                 this.updateTotals();
             }
         },
-        
+
         updateDelivery() {
             this.shippingCost = this.deliveryArea === 'inside' ? 100 : 150;
             this.updateTotals();
         },
-        
+
         updateTotals() {
             const regularTotal = this.quantities.regular * 690;
             const familyTotal = this.quantities.family * 1290;
@@ -727,6 +761,101 @@ function orderForm() {
 
         formatPrice(value) {
             return `৳${this.toBengaliDigits(value)}`;
+        },
+
+        async submitOrder() {
+            // Clear previous messages
+            this.successMessage = '';
+            this.errorMessage = '';
+
+            // Validation
+            if (!this.formData.name.trim()) {
+                this.errorMessage = 'নাম অবশ্যই দিতে হবে';
+                return;
+            }
+
+            if (!this.formData.mobile.trim()) {
+                this.errorMessage = 'মোবাইল নম্বর অবশ্যই দিতে হবে';
+                return;
+            }
+
+            if (!this.formData.address.trim()) {
+                this.errorMessage = 'ঠিকানা অবশ্যই দিতে হবে';
+                return;
+            }
+
+            const quantity = this.selectedProduct === 'regular' ? this.quantities.regular : this.quantities.family;
+            if (quantity < 1) {
+                this.errorMessage = 'অন্তত ১টি পণ্য নির্বাচন করুন';
+                return;
+            }
+
+            // Submit order
+            this.isSubmitting = true;
+
+            try {
+                const response = await fetch('/order', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                    },
+                    body: JSON.stringify({
+                        name: this.formData.name,
+                        mobile: this.formData.mobile,
+                        address: this.formData.address,
+                        package: this.selectedProduct,
+                        quantity: quantity,
+                        delivery_area: this.deliveryArea
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.success) {
+                    this.successMessage = data.message;
+                    this.resetForm();
+                } else {
+                    // Handle validation errors
+                    if (data.errors) {
+                        const firstError = Object.values(data.errors)[0];
+                        this.errorMessage = Array.isArray(firstError) ? firstError[0] : firstError;
+                    } else {
+                        this.errorMessage = data.message || 'অর্ডার প্রক্রিয়া করতে সমস্যা হয়েছে। আবার চেষ্টা করুন।';
+                    }
+                }
+            } catch (error) {
+                console.error('Order submission error:', error);
+                this.errorMessage = 'অর্ডার প্রক্রিয়া করতে সমস্যা হয়েছে। আবার চেষ্টা করুন।';
+            } finally {
+                this.isSubmitting = false;
+            }
+        },
+
+        resetForm() {
+            // Reset form data
+            this.formData = {
+                name: '',
+                mobile: '',
+                address: ''
+            };
+
+            // Reset to default product (family pack)
+            this.selectedProduct = 'family';
+            this.quantities = {
+                regular: 0,
+                family: 1
+            };
+            this.deliveryArea = 'inside';
+
+            // Update product details
+            this.updateProduct();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                this.successMessage = '';
+            }, 5000);
         }
     }
 }
