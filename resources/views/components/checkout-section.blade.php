@@ -146,8 +146,9 @@
 
 .price-stack {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
     font-family: 'Hind Siliguri', sans-serif;
 }
 
@@ -182,7 +183,7 @@
     background: #F1F1F1;
     color: #333333;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -204,7 +205,7 @@
     min-width: 36px;
     text-align: center;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
     color: #111111;
 }
 
