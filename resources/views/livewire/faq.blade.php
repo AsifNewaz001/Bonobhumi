@@ -1,8 +1,8 @@
 <div x-data="{ openFaq: null }" class="space-y-4">
     @foreach($faqs as $faq)
-        <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden faq-card" style="border: 0.45px solid #EFC14B;">
             <!-- Question Header -->
-            <div 
+            <div
                 @click="openFaq = openFaq === {{ $faq['id'] }} ? null : {{ $faq['id'] }}"
                 class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 cursor-pointer transition-all duration-300 select-none"
                 :class="{ 'bg-gradient-to-r from-ghee-gold to-yellow-500 text-white': openFaq === {{ $faq['id'] }}, 'bg-white': openFaq !== {{ $faq['id'] }} }"
@@ -11,8 +11,9 @@
                 @keydown.enter="openFaq = openFaq === {{ $faq['id'] }} ? null : {{ $faq['id'] }}"
                 @keydown.space.prevent="openFaq = openFaq === {{ $faq['id'] }} ? null : {{ $faq['id'] }}"
             >
-                <span class="text-lg font-semibold font-bengali pr-4 pointer-events-none transition-colors duration-300"
-                      :class="{ 'text-white': openFaq === {{ $faq['id'] }}, 'text-gray-900': openFaq !== {{ $faq['id'] }} }">
+                <span class="faq-question font-semibold font-bengali pr-4 pointer-events-none transition-colors duration-300"
+                      :class="{ 'text-white': openFaq === {{ $faq['id'] }} }"
+                      style="color: #604D20; font-size: 18px;">
                     {{ $faq['question'] }}
                 </span>
                 <div class="flex-shrink-0 pointer-events-none">
@@ -40,5 +41,4 @@
             </div>
         </div>
     @endforeach
-    
 </div>

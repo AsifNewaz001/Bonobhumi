@@ -2,22 +2,22 @@
     <!-- Mobile Layout (≤ md) -->
     <div class="max-w-screen-sm mx-auto px-4 py-6 bg-transparent lg:hidden">
         <!-- Section Title -->
-        <div class="text-center mb-6">
+        <div class="text-center mb-4">
             <h2 class="font-bold leading-tight mb-4" style="font-family: 'Hind Siliguri', sans-serif; color: #604D20; font-size: clamp(24px, 5vw, 48px);">
                 সাধারণ ঘি ও বনভূমি সরের ঘি এর মধ্যে তফাৎ কোথায়?
             </h2>
             <div class="w-24 h-1 mx-auto" style="background-color: #F59E0B;"></div>
         </div>
-        
+
         <!-- Product Image -->
-        <div class="w-80 h-80 mx-auto relative mb-4 mt-6">
-            <img src="{{ asset('3Gee.png') }}" alt="ঘি তৈরির প্রক্রিয়া" class="absolute inset-0 m-auto w-full h-full object-contain drop-shadow-lg">
+        <div class="flex justify-center mb-6">
+            <img src="{{ asset('3Gee.png') }}" alt="ঘি তৈরির প্রক্রিয়া" class="object-contain drop-shadow-lg" style="width: 252px; height: 246px;">
         </div>
-        
+
         <!-- Mobile Benefit Cards -->
         <div class="space-y-3">
             <!-- Card 1 -->
-            <div class="rounded-xl border border-orange-200 p-4 shadow-[0_1px_0_#0000000d] flex items-start" style="background-color: #FFFBEB;">
+            <div class="rounded-xl border border-orange-200 p-4 flex items-start" style="background-color: #FFFBEB; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 <div class="w-16 h-16 grid place-content-center rounded-full bg-orange-50 text-orange-500 text-base mr-3 flex-shrink-0" aria-hidden="true">
                     <img src="{{ asset('উৎকৃষ্ট সর থেকে তৈরি.svg') }}" alt="" class="w-8 h-8">
                 </div>
@@ -28,7 +28,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="rounded-xl border border-orange-200 p-4 shadow-[0_1px_0_#0000000d] flex items-start" style="background-color: #FFFBEB;">
+            <div class="rounded-xl border border-orange-200 p-4 flex items-start" style="background-color: #FFFBEB; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 <div class="w-16 h-16 grid place-content-center rounded-full bg-orange-50 text-orange-500 text-base mr-3 flex-shrink-0" aria-hidden="true">
                     <img src="{{ asset('শুধুমাত্র দেশি গরু.svg') }}" alt="" class="w-8 h-8">
                 </div>
@@ -39,7 +39,7 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="rounded-xl border border-orange-200 p-4 shadow-[0_1px_0_#0000000d] flex items-start" style="background-color: #FFFBEB;">
+            <div class="rounded-xl border border-orange-200 p-4 flex items-start" style="background-color: #FFFBEB; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 <div class="w-16 h-16 grid place-content-center rounded-full bg-orange-50 text-orange-500 text-base mr-3 flex-shrink-0" aria-hidden="true">
                     <img src="{{ asset('সার্বিক স্বাস্থ্যের উন্নতি.svg') }}" alt="" class="w-8 h-8">
                 </div>
@@ -50,7 +50,7 @@
             </div>
 
             <!-- Card 4 -->
-            <div class="rounded-xl border border-orange-200 p-4 shadow-[0_1px_0_#0000000d] flex items-start" style="background-color: #FFFBEB;">
+            <div class="rounded-xl border border-orange-200 p-4 flex items-start" style="background-color: #FFFBEB; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 <div class="w-16 h-16 grid place-content-center rounded-full bg-orange-50 text-orange-500 text-base mr-3 flex-shrink-0" aria-hidden="true">
                     <img src="{{ asset('ঐতিহ্যবাহী বিলোনা পদ্ধতি.svg') }}" alt="" class="w-8 h-8">
                 </div>
@@ -61,7 +61,7 @@
             </div>
 
             <!-- Card 5 -->
-            <div class="rounded-xl border border-orange-200 p-4 shadow-[0_1px_0_#0000000d] flex items-start" style="background-color: #FFFBEB;">
+            <div class="rounded-xl border border-orange-200 p-4 flex items-start" style="background-color: #FFFBEB; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 <div class="w-16 h-16 grid place-content-center rounded-full bg-orange-50 text-orange-500 text-base mr-3 flex-shrink-0" aria-hidden="true">
                     <img src="{{ asset('সহজপাচ্য ও স্বাস্থ্যকর.svg') }}" alt="" class="w-8 h-8">
                 </div>
@@ -72,7 +72,7 @@
             </div>
 
             <!-- Card 6 -->
-            <div class="rounded-xl border border-orange-200 p-4 shadow-[0_1px_0_#0000000d] flex items-start" style="background-color: #FFFBEB;">
+            <div class="rounded-xl border border-orange-200 p-4 flex items-start" style="background-color: #FFFBEB; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 <div class="w-16 h-16 grid place-content-center rounded-full bg-orange-50 text-orange-500 text-base mr-3 flex-shrink-0" aria-hidden="true">
                     <img src="{{ asset('ভিটামিন ও ওমেগা-৩ সমৃদ্ধ.svg') }}" alt="" class="w-8 h-8">
                 </div>
@@ -83,7 +83,7 @@
             </div>
 
             <!-- Card 7 -->
-            <div class="rounded-xl border border-orange-200 p-4 shadow-[0_1px_0_#0000000d] flex items-start" style="background-color: #FFFBEB;">
+            <div class="rounded-xl border border-orange-200 p-4 flex items-start" style="background-color: #FFFBEB; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 <div class="w-16 h-16 grid place-content-center rounded-full bg-orange-50 text-orange-500 text-base mr-3 flex-shrink-0" aria-hidden="true">
                     <img src="{{ asset('নিবিড় যত্ন ও সেরা প্যাকেজিং.svg') }}" alt="" class="w-8 h-8">
                 </div>
@@ -94,7 +94,7 @@
             </div>
 
             <!-- Card 8 -->
-            <div class="rounded-xl border border-orange-200 p-4 shadow-[0_1px_0_#0000000d] flex items-start" style="background-color: #FFFBEB;">
+            <div class="rounded-xl border border-orange-200 p-4 flex items-start" style="background-color: #FFFBEB; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 <div class="w-16 h-16 grid place-content-center rounded-full bg-orange-50 text-orange-500 text-base mr-3 flex-shrink-0" aria-hidden="true">
                     <img src="{{ asset('উৎকৃষ্ট সর থেকে তৈরি.svg') }}" alt="" class="w-8 h-8">
                 </div>
@@ -104,9 +104,9 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile CTA Button -->
-        <button onclick="document.getElementById('order-form').scrollIntoView({behavior: 'smooth'})" class="mt-6 w-full py-4 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg bg-emerald-600 hover:bg-emerald-700" style="font-family: 'Hind Siliguri', sans-serif;">
+        <button onclick="document.getElementById('order-form').scrollIntoView({behavior: 'smooth'})" class="cta-button mt-6 w-full py-4 text-white font-bold text-lg">
             এখনই অর্ডার করুন
         </button>
     </div>
@@ -127,7 +127,7 @@
             <!-- Left Column Cards -->
             <div class="space-y-4">
                 <!-- Card 1 -->
-                <div class="rounded-xl border border-orange-200 p-5 shadow-sm hover:shadow-md transition-shadow duration-200" style="background-color: #FFFBEB;">
+                <div class="rounded-xl border border-orange-200 p-5 transition-shadow duration-200" style="background-color: #FFFBEB; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" onmouseover="this.style.boxShadow='0 6px 10px rgba(0, 0, 0, 0.15)'" onmouseout="this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)'">
                     <div class="w-16 h-16 grid place-content-center rounded-full bg-orange-50 text-orange-500 text-base ml-auto mb-3" aria-hidden="true">
                         <img src="{{ asset('উৎকৃষ্ট সর থেকে তৈরি.svg') }}" alt="" class="w-8 h-8">
                     </div>
@@ -138,7 +138,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="rounded-xl border border-orange-200 p-5 shadow-sm hover:shadow-md transition-shadow duration-200" style="background-color: #FFFBEB;">
+                <div class="rounded-xl border border-orange-200 p-5 transition-shadow duration-200" style="background-color: #FFFBEB; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" onmouseover="this.style.boxShadow='0 6px 10px rgba(0, 0, 0, 0.15)'" onmouseout="this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)'">
                     <div class="w-16 h-16 grid place-content-center rounded-full bg-orange-50 text-orange-500 text-base ml-auto mb-3" aria-hidden="true">
                         <img src="{{ asset('শুধুমাত্র দেশি গরু.svg') }}" alt="" class="w-8 h-8">
                     </div>
@@ -149,7 +149,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="rounded-xl border border-orange-200 p-5 shadow-sm hover:shadow-md transition-shadow duration-200" style="background-color: #FFFBEB;">
+                <div class="rounded-xl border border-orange-200 p-5 transition-shadow duration-200" style="background-color: #FFFBEB; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" onmouseover="this.style.boxShadow='0 6px 10px rgba(0, 0, 0, 0.15)'" onmouseout="this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)'">
                     <div class="w-16 h-16 grid place-content-center rounded-full bg-orange-50 text-orange-500 text-base ml-auto mb-3" aria-hidden="true">
                         <img src="{{ asset('সার্বিক স্বাস্থ্যের উন্নতি.svg') }}" alt="" class="w-8 h-8">
                     </div>
@@ -160,7 +160,7 @@
                 </div>
 
                 <!-- Card 4 (Left Column) -->
-                <div class="rounded-xl border border-orange-200 p-5 shadow-sm hover:shadow-md transition-shadow duration-200" style="background-color: #FFFBEB;">
+                <div class="rounded-xl border border-orange-200 p-5 transition-shadow duration-200" style="background-color: #FFFBEB; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" onmouseover="this.style.boxShadow='0 6px 10px rgba(0, 0, 0, 0.15)'" onmouseout="this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)'">
                     <div class="w-16 h-16 grid place-content-center rounded-full bg-orange-50 text-orange-500 text-base ml-auto mb-3" aria-hidden="true">
                         <img src="{{ asset('নিবিড় যত্ন ও সেরা প্যাকেজিং.svg') }}" alt="" class="w-8 h-8">
                     </div>
@@ -179,7 +179,7 @@
             <!-- Right Column Cards -->
             <div class="space-y-4">
                 <!-- Card 4 -->
-                <div class="rounded-xl border border-orange-200 p-5 shadow-sm hover:shadow-md transition-shadow duration-200" style="background-color: #FFFBEB;">
+                <div class="rounded-xl border border-orange-200 p-5 transition-shadow duration-200" style="background-color: #FFFBEB; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" onmouseover="this.style.boxShadow='0 6px 10px rgba(0, 0, 0, 0.15)'" onmouseout="this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)'">
                     <div class="w-16 h-16 grid place-content-center rounded-full bg-orange-50 text-orange-500 text-base mr-auto mb-3" aria-hidden="true">
                         <img src="{{ asset('ঐতিহ্যবাহী বিলোনা পদ্ধতি.svg') }}" alt="" class="w-8 h-8">
                     </div>
@@ -190,7 +190,7 @@
                 </div>
 
                 <!-- Card 5 -->
-                <div class="rounded-xl border border-orange-200 p-5 shadow-sm hover:shadow-md transition-shadow duration-200" style="background-color: #FFFBEB;">
+                <div class="rounded-xl border border-orange-200 p-5 transition-shadow duration-200" style="background-color: #FFFBEB; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" onmouseover="this.style.boxShadow='0 6px 10px rgba(0, 0, 0, 0.15)'" onmouseout="this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)'">
                     <div class="w-16 h-16 grid place-content-center rounded-full bg-orange-50 text-orange-500 text-base mr-auto mb-3" aria-hidden="true">
                         <img src="{{ asset('সহজপাচ্য ও স্বাস্থ্যকর.svg') }}" alt="" class="w-8 h-8">
                     </div>
@@ -201,7 +201,7 @@
                 </div>
 
                 <!-- Card 6 -->
-                <div class="rounded-xl border border-orange-200 p-5 shadow-sm hover:shadow-md transition-shadow duration-200" style="background-color: #FFFBEB;">
+                <div class="rounded-xl border border-orange-200 p-5 transition-shadow duration-200" style="background-color: #FFFBEB; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" onmouseover="this.style.boxShadow='0 6px 10px rgba(0, 0, 0, 0.15)'" onmouseout="this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)'">
                     <div class="w-16 h-16 grid place-content-center rounded-full bg-orange-50 text-orange-500 text-base mr-auto mb-3" aria-hidden="true">
                         <img src="{{ asset('ভিটামিন ও ওমেগা-৩ সমৃদ্ধ.svg') }}" alt="" class="w-8 h-8">
                     </div>
@@ -212,7 +212,7 @@
                 </div>
 
                 <!-- Card 8 (Right Column) -->
-                <div class="rounded-xl border border-orange-200 p-5 shadow-sm hover:shadow-md transition-shadow duration-200" style="background-color: #FFFBEB;">
+                <div class="rounded-xl border border-orange-200 p-5 transition-shadow duration-200" style="background-color: #FFFBEB; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" onmouseover="this.style.boxShadow='0 6px 10px rgba(0, 0, 0, 0.15)'" onmouseout="this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)'">
                     <div class="w-16 h-16 grid place-content-center rounded-full bg-orange-50 text-orange-500 text-base mr-auto mb-3" aria-hidden="true">
                         <img src="{{ asset('উৎকৃষ্ট সর থেকে তৈরি.svg') }}" alt="" class="w-8 h-8">
                     </div>
@@ -226,9 +226,25 @@
 
         <!-- Desktop CTA Button -->
         <div class="flex justify-center mt-8">
-            <button onclick="document.getElementById('order-form').scrollIntoView({behavior: 'smooth'})" class="w-[min(320px,90%)] py-4 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg bg-emerald-600 hover:bg-emerald-700" style="font-family: 'Hind Siliguri', sans-serif;">
+            <button onclick="document.getElementById('order-form').scrollIntoView({behavior: 'smooth'})" class="cta-button w-[min(320px,90%)] py-4 text-white font-bold text-lg">
                 এখনই অর্ডার করুন
             </button>
         </div>
     </div>
 </section>
+
+<style>
+    /* CTA Button Styling - Global for all sections */
+    .cta-button {
+        font-family: 'Nirmala UI', 'Segoe UI', sans-serif;
+        background: linear-gradient(180deg, #059845 0%, #018038 100%);
+        border-radius: 9999px;
+        box-shadow: 0 0 0 3px #DEE6E2, 0 4.52px 4.52px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 3px #DEE6E2, 0 6px 8px rgba(0, 0, 0, 0.3);
+    }
+</style>

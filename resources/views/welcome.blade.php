@@ -53,7 +53,19 @@
         @include('components.ata-section')
         
         <!-- FAQ Section -->
-        <section class="py-16 bg-cover bg-center bg-no-repeat relative" style="background-image: url('{{ asset('faq2.png') }}');">
+        <section class="py-16 bg-cover bg-center bg-no-repeat relative faq-section" style="background-image: url('{{ asset('faq2.png') }}');">
+            <style>
+                @media (min-width: 768px) {
+                    .faq-section .faq-question {
+                        font-size: 18px !important;
+                    }
+                }
+                @media (max-width: 767px) {
+                    .faq-section .faq-question {
+                        font-size: 16px !important;
+                    }
+                }
+            </style>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center lg:justify-end">
                 <div class="max-w-4xl lg:mr-8">
                 <div class="text-center mb-12">

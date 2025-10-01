@@ -158,56 +158,60 @@
         <!-- Product Selection Section -->
         <div class="max-w-5xl mx-auto mb-12">
             <h3 class="text-xl font-bold text-gray-900 mb-6" style="font-family: 'Hind Siliguri', sans-serif;">Your Products</h3>
-            <div class="grid md:grid-cols-2 gap-6">
+            <div class="grid md:grid-cols-2 gap-6 product-selection-grid">
                 <!-- Regular Pack Card -->
-                <div class="bg-white rounded-lg border-2 p-4 transition-all" :class="selectedProduct === 'regular' ? 'border-green-500' : 'border-gray-200'">
-                    <div class="flex items-start space-x-4">
-                        <input type="radio" name="product" value="regular" class="w-5 h-5 text-green-600 mt-2" x-model="selectedProduct" @change="updateProduct()">
-                        <div class="w-16 h-16 flex-shrink-0">
-                            <img src="{{ asset('singleGhee.png') }}" alt="রেগুলার প্যাক" class="w-full h-full object-contain">
-                        </div>
-                        <div class="flex-1">
-                            <h4 class="font-semibold text-gray-800" style="font-family: 'Hind Siliguri', sans-serif;">রেগুলার প্যাক ৩০০ গ্রাম</h4>
-                            <div class="flex items-center space-x-2 mt-1">
-                                <span class="text-gray-500 line-through text-sm" style="font-family: 'Hind Siliguri', sans-serif;">৮৭০ টাকা</span>
-                                <span class="text-green-600 font-bold" style="font-family: 'Hind Siliguri', sans-serif;">৬৯০ টাকা</span>
+                <div class="bg-white rounded-lg border-2 p-6 transition-all" :class="selectedProduct === 'regular' ? 'border-green-500' : 'border-gray-200'">
+                    <div class="flex flex-col space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <input type="radio" name="product" value="regular" class="w-5 h-5 text-green-600 mt-2" x-model="selectedProduct" @change="updateProduct()">
+                            <div class="w-20 h-20 flex-shrink-0">
+                                <img src="{{ asset('singleGhee.png') }}" alt="রেগুলার প্যাক" class="w-full h-full object-contain">
                             </div>
-                            <div class="flex items-center mt-2">
-                                <span class="text-sm text-gray-600 mr-3" style="font-family: 'Hind Siliguri', sans-serif;">Quantity:</span>
-                                <div class="flex items-center border rounded">
-                                    <button type="button" class="px-2 py-1 hover:bg-gray-100" @click="decreaseQuantity('regular')">-</button>
-                                    <span class="px-3 py-1" x-text="quantities.regular">0</span>
-                                    <button type="button" class="px-2 py-1 hover:bg-gray-100" @click="increaseQuantity('regular')">+</button>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-800 text-lg" style="font-family: 'Hind Siliguri', sans-serif;">রেগুলার প্যাক ৩০০ গ্রাম</h4>
+                                <div class="flex items-center space-x-2 mt-2">
+                                    <span class="text-gray-500 line-through text-sm" style="font-family: 'Hind Siliguri', sans-serif;">৮৭০ টাকা</span>
+                                    <span class="text-green-600 font-bold text-lg" style="font-family: 'Hind Siliguri', sans-serif;">৬৯০ টাকা</span>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t">
+                            <span class="text-sm text-gray-600 font-medium" style="font-family: 'Hind Siliguri', sans-serif;">Quantity:</span>
+                            <div class="flex items-center border-2 border-gray-300 rounded-lg">
+                                <button type="button" class="px-3 py-2 hover:bg-gray-100 font-bold text-lg" @click="decreaseQuantity('regular')">-</button>
+                                <span class="px-4 py-2 font-bold text-lg min-w-[40px] text-center" x-text="quantities.regular">0</span>
+                                <button type="button" class="px-3 py-2 hover:bg-gray-100 font-bold text-lg" @click="increaseQuantity('regular')">+</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Family Pack Card -->
-                <div class="bg-white rounded-lg border-2 p-4 transition-all relative" :class="selectedProduct === 'family' ? 'border-green-500' : 'border-gray-200'">
+                <div class="bg-white rounded-lg border-2 p-6 transition-all relative family-pack-card" :class="selectedProduct === 'family' ? 'border-green-500' : 'border-gray-200'">
                     <!-- Discount Badge -->
-                    <div class="absolute -top-2 -right-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold" style="font-family: 'Hind Siliguri', sans-serif;">
+                    <div class="absolute discount-badge bg-red-500 text-white px-3 py-1.5 rounded-full text-sm font-bold shadow-lg" style="font-family: 'Hind Siliguri', sans-serif; top: -12px; right: -12px;">
                         ৪৯০ টাকা ছাড়!!
                     </div>
-                    <div class="flex items-start space-x-4">
-                        <input type="radio" name="product" value="family" class="w-5 h-5 text-green-600 mt-2" x-model="selectedProduct" @change="updateProduct()">
-                        <div class="w-16 h-16 flex-shrink-0">
-                            <img src="{{ asset('Gheepack.png') }}" alt="ফ্যামিলি প্যাক" class="w-full h-full object-contain">
-                        </div>
-                        <div class="flex-1">
-                            <h4 class="font-semibold text-gray-800" style="font-family: 'Hind Siliguri', sans-serif;">ফ্যামিলি প্যাক ৩০০ গ্রাম × ২</h4>
-                            <div class="flex items-center space-x-2 mt-1">
-                                <span class="text-gray-500 line-through text-sm" style="font-family: 'Hind Siliguri', sans-serif;">১৫৩০ টাকা</span>
-                                <span class="text-green-600 font-bold" style="font-family: 'Hind Siliguri', sans-serif;">১২৯০ টাকা</span>
+                    <div class="flex flex-col space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <input type="radio" name="product" value="family" class="w-5 h-5 text-green-600 mt-2" x-model="selectedProduct" @change="updateProduct()">
+                            <div class="w-20 h-20 flex-shrink-0">
+                                <img src="{{ asset('Gheepack.png') }}" alt="ফ্যামিলি প্যাক" class="w-full h-full object-contain">
                             </div>
-                            <div class="flex items-center mt-2">
-                                <span class="text-sm text-gray-600 mr-3" style="font-family: 'Hind Siliguri', sans-serif;">Quantity:</span>
-                                <div class="flex items-center border rounded">
-                                    <button type="button" class="px-2 py-1 hover:bg-gray-100" @click="decreaseQuantity('family')">-</button>
-                                    <span class="px-3 py-1" x-text="quantities.family">0</span>
-                                    <button type="button" class="px-2 py-1 hover:bg-gray-100" @click="increaseQuantity('family')">+</button>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-800 text-lg" style="font-family: 'Hind Siliguri', sans-serif;">ফ্যামিলি প্যাক ৩০০ গ্রাম × ২</h4>
+                                <div class="flex items-center space-x-2 mt-2">
+                                    <span class="text-gray-500 line-through text-sm" style="font-family: 'Hind Siliguri', sans-serif;">১৫৩০ টাকা</span>
+                                    <span class="text-green-600 font-bold text-lg" style="font-family: 'Hind Siliguri', sans-serif;">১২৯০ টাকা</span>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t">
+                            <span class="text-sm text-gray-600 font-medium" style="font-family: 'Hind Siliguri', sans-serif;">Quantity:</span>
+                            <div class="flex items-center border-2 border-gray-300 rounded-lg">
+                                <button type="button" class="px-3 py-2 hover:bg-gray-100 font-bold text-lg" @click="decreaseQuantity('family')">-</button>
+                                <span class="px-4 py-2 font-bold text-lg min-w-[40px] text-center" x-text="quantities.family">0</span>
+                                <button type="button" class="px-3 py-2 hover:bg-gray-100 font-bold text-lg" @click="increaseQuantity('family')">+</button>
                             </div>
                         </div>
                     </div>
@@ -529,3 +533,28 @@ function orderForm() {
     }
 }
 </script>
+
+<style>
+    @media (max-width: 767px) {
+        .product-selection-grid {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .product-selection-grid > div {
+            padding: 1.25rem !important;
+        }
+
+        .product-selection-grid .w-20 {
+            width: 100px !important;
+            height: 100px !important;
+        }
+
+        .discount-badge {
+            font-size: 13px !important;
+            padding: 0.5rem 0.75rem !important;
+            top: -10px !important;
+            right: -10px !important;
+        }
+    }
+</style>

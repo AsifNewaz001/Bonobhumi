@@ -88,6 +88,17 @@
                     grid-template-columns: 1fr;
                     gap: 1.5rem;
                 }
+
+                .grid.md\\:grid-cols-3 > div {
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+            }
+
+            @media (min-width: 769px) {
+                .grid.md\\:grid-cols-3 > div {
+                    max-width: 380px;
+                }
             }
         </style>
 
