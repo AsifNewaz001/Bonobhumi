@@ -40,18 +40,17 @@ bonobhumi-landing/
 ├── app/
 │   └── Livewire/
 │       ├── ContactForm.php
-│       ├── FAQ.php
-│       └── TestimonialCarousel.php
+│       └── FAQ.php
 ├── resources/
 │   └── views/
 │       ├── welcome.blade.php
 │       ├── livewire/
 │       │   ├── contact-form.blade.php
-│       │   ├── faq.blade.php
-│       │   └── testimonial-carousel.blade.php
+│       │   └── faq.blade.php
 │       └── components/
 │           ├── hero-section.blade.php
 │           ├── features-section.blade.php
+│           ├── testimonial-videos-section.blade.php
 │           ├── pricing-section.blade.php
 │           └── footer.blade.php
 ├── public/
@@ -67,7 +66,7 @@ bonobhumi-landing/
 ### Primary Sources
 1. **Web.pdf** - Landing page structure, copy, FAQs, testimonials, pricing
 2. **USP Of 5 Product.pdf** - Product benefits and differentiators (Ghee section only)
-3. **assets** - folder contains assets required for this project
+3. **public/assets** - folder contains the images used on this landing page
 
 ### Key Content Elements
 
@@ -158,11 +157,11 @@ bonobhumi-landing/
 
 ### 3. Social Proof Section
 **Features:**
-- Customer testimonials carousel
-- Certification logos
-- Star ratings
-- Cultural nostalgia messaging
-- Trust metrics
+- Three-column testimonial video grid with responsive stacking
+- Embedded YouTube iframes with descriptive titles
+- Bengali copy for quotes, names, and locations
+- Card-based layout with consistent padding and shadows
+- Inline media-query overrides for mobile spacing
 
 ### 4. Pricing Section
 **Features:**
@@ -203,14 +202,6 @@ protected $rules = [
 - Alpine.js interactions
 - ARIA accessibility
 - Search functionality (optional)
-
-### 7. TestimonialCarousel Component
-**Features:**
-- Auto-rotating testimonials
-- Manual navigation
-- Responsive design
-- Smooth transitions
-- Touch/swipe support
 
 ## 🔧 Implementation Guidelines
 
@@ -418,7 +409,7 @@ npm run build
 
 ### Content Updates
 - [ ] Seasonal promotions
-- [ ] New testimonials
+- [ ] Updated testimonial videos or quotes
 - [ ] Updated pricing
 - [ ] Additional FAQs
 - [ ] Product images refresh
@@ -431,7 +422,7 @@ npm run build
 3. Add Livewire ContactForm with full validation
 4. Create features and pricing sections
 5. Implement FAQ component with Alpine.js
-6. Add testimonial carousel
+6. Add testimonial video section
 7. Optimize for performance and mobile
 8. Test thoroughly before considering complete
 

@@ -1,10 +1,10 @@
-<section class="relative overflow-hidden" style="background-image: url('{{ asset('assets/header 1.png') }}'); background-size: cover; background-position: center 30%; background-repeat: no-repeat;">
+<section class="relative overflow-hidden" style="background-image: url('{{ asset('assets/header 1.png') }}'); background-size: 100% auto; background-position: center top; background-repeat: no-repeat;">
     <!-- Mobile-specific background styling -->
     <style>
         @media (max-width: 768px) {
             section {
                 background-size: 350% auto !important;
-                background-position: center top !important;
+                background-position: center 0% !important;
             }
         }
 
